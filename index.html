@@ -1,0 +1,1376 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sandvilla Guest House · Oban (concept)</title>
+<meta name="description" content="Concept redesign: six en-suite rooms in a mid-terraced Victorian sandstone villa in Oban, plus 9INE, a two-bedroom self-check-in flat.">
+<meta name="theme-color" content="#2a2238">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a2238'/%3E%3Cpath d='M14 50V28l18-14 18 14v22z' fill='%23c99a6b'/%3E%3Crect x='20' y='32' width='9' height='9' fill='%23f3c255'/%3E%3Crect x='35' y='32' width='9' height='9' fill='%23f3c255'/%3E%3Crect x='28' y='42' width='8' height='8' fill='%232a2238'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{background:#2a2238;margin:0}
+:root{
+  --cream:#f6efe2;--cream-2:#ece0cb;--paper:#fbf7ef;
+  --sand:#c99a6b;--sand-deep:#9f6c43;--sand-ink:#5a3a22;
+  --heather:#6e5a8a;--heather-deep:#43365c;--heather-ink:#2a2238;
+  --slate:#33414e;--slate-ink:#1c242d;--ink:#211d27;--ink-70:rgba(33,29,39,.74);--ink-50:rgba(33,29,39,.56);
+  --brass:#f3c255;--brass-deep:#c99328;--brass-ink:#7a5410;--glow:rgba(243,194,85,.35);
+  --c100:#fbf5ea;--c82:rgba(251,245,234,.84);--c64:rgba(251,245,234,.66);--c40:rgba(251,245,234,.42);
+  --line-d:rgba(251,245,234,.14);--line-l:rgba(33,29,39,.12);
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r:18px;--r-s:12px;--wrap:1240px;--ease:cubic-bezier(.2,.7,.2,1);
+  --hh:64px;--hdr:98px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 17px/1.6 var(--sans);color:var(--ink);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:6px}
+.wrap{width:min(var(--wrap),100% - 32px);margin-inline:auto}
+@media (min-width:700px){.wrap{width:min(var(--wrap),100% - 64px)}}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--brass);color:var(--ink);padding:10px 14px;border-radius:10px;font-weight:600}
+.skip:focus{top:12px}
+
+/* ribbon, progress, header */
+.topbar{position:sticky;top:0;z-index:70}
+.ribbon{position:relative;background:#17121f;color:var(--c82);font:500 13px/1.35 var(--sans);text-align:center;padding:8px 16px;letter-spacing:.01em}
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:90;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--brass-deep),var(--brass));pointer-events:none}
+header.top{position:relative;height:var(--hh);background:rgba(30,24,40,.72);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line-d);color:var(--c100)}
+header.top .wrap{height:100%;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;white-space:nowrap}
+.brand b{font:600 26px/1 var(--serif);letter-spacing:-.01em}
+.brand span{font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--c64)}
+.nav{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav a{font:500 14.5px/1 var(--sans);text-decoration:none;padding:10px 11px;border-radius:999px;color:var(--c82);transition:background .2s,color .2s}
+.nav a:hover{background:rgba(251,245,234,.09);color:var(--c100)}
+.hdr-cta{display:flex;gap:8px;margin-left:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:0 20px;border-radius:999px;border:1px solid transparent;font:600 15px/1 var(--sans);text-decoration:none;white-space:nowrap;transition:transform .18s var(--ease),background .2s,box-shadow .2s,border-color .2s,color .2s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-brass{background:var(--brass);color:#2a1d05;box-shadow:0 6px 24px -8px rgba(243,194,85,.7)}
+.btn-brass:hover{background:#f7cf6f;box-shadow:0 10px 30px -8px rgba(243,194,85,.85)}
+.btn-ghost{border-color:rgba(251,245,234,.34);color:var(--c100);background:rgba(251,245,234,.04)}
+.btn-ghost:hover{border-color:var(--c100);background:rgba(251,245,234,.1)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--heather-deep)}
+.btn-line{border-color:var(--line-l);color:var(--ink);background:#fff}
+.btn-line:hover{border-color:var(--ink)}
+.btn-sm{min-height:40px;padding:0 15px;font-size:14px}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border-radius:12px;border:1px solid var(--line-d);background:transparent;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px}
+@media (max-width:1060px){
+  .nav{display:none;position:absolute;inset:var(--hh) 0 auto 0;flex-direction:column;align-items:stretch;gap:0;padding:10px 16px 18px;background:rgba(26,20,34,.97);border-bottom:1px solid var(--line-d)}
+  .nav.open{display:flex}
+  .nav a{padding:15px 10px;font-size:17px;border-radius:10px}
+  .burger{display:inline-flex}
+  .hdr-cta{margin-left:0}
+}
+@media (max-width:520px){.hdr-cta .btn-brass{display:none}.brand span{display:none}}
+
+/* ---------- scene ---------- */
+.scene{position:relative;background:var(--heather-ink);color:var(--c100)}
+.stage{position:sticky;top:var(--hdr);height:calc(100vh - var(--hdr));height:calc(100svh - var(--hdr));overflow:hidden;background:#2b2440;touch-action:pan-y;cursor:grab}
+.stage.dragging{cursor:grabbing}
+.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;opacity:0;transition:opacity .9s ease}
+.stage canvas.on{opacity:1}
+.scrim{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(23,18,31,.78) 0%,rgba(23,18,31,.35) 34%,rgba(23,18,31,0) 56%),
+  linear-gradient(0deg,rgba(23,18,31,.7) 0%,rgba(23,18,31,0) 32%),
+  linear-gradient(180deg,rgba(23,18,31,.55) 0%,rgba(23,18,31,0) 22%);transition:opacity .6s}
+.scene.explore .scrim{opacity:.55}
+.ill-label{position:absolute;left:16px;bottom:16px;margin:0;z-index:3;max-width:min(92vw,560px);font:500 12.5px/1.35 var(--sans);letter-spacing:.02em;color:var(--c82);background:rgba(23,18,31,.62);border:1px solid var(--line-d);padding:7px 11px;border-radius:999px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+@media (min-width:700px){.ill-label{left:32px;bottom:22px}}
+.drag-hint{position:absolute;right:20px;bottom:22px;margin:0;z-index:3;display:none;align-items:center;gap:8px;font:500 12.5px/1 var(--sans);color:var(--c64);transition:opacity .6s}
+.js .drag-hint.show{display:inline-flex}
+.drag-hint svg{width:18px;height:18px}
+.tags{position:absolute;inset:0;pointer-events:none;z-index:2}
+.tag{position:absolute;left:0;top:0;transform:translate(-50%,-130%);white-space:nowrap;font:600 12.5px/1 var(--sans);color:#2a1d05;background:var(--brass);padding:8px 11px;border-radius:999px;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);opacity:0;transition:opacity .4s}
+.tag::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:var(--brass);transform:translateX(-50%) rotate(45deg);border-radius:2px}
+.tag.on{opacity:1}
+.screen{position:relative;z-index:5;min-height:calc(100vh - var(--hdr));min-height:calc(100svh - var(--hdr));pointer-events:none}
+.screen a,.screen button,.screen .panel{pointer-events:auto}
+.hero-screen{margin-top:calc(var(--hdr) - 100vh);margin-top:calc(var(--hdr) - 100svh);display:flex;align-items:flex-end;padding:24px 0 72px}
+.hero-copy{max-width:680px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.8}
+.h1{font:600 clamp(54px,8vw,118px)/.92 var(--serif);letter-spacing:-.025em;margin:18px 0 0;text-wrap:balance}
+.h1 em{display:block;font-style:italic;font-weight:500;color:var(--cream-2)}
+.tagline{font:italic 400 clamp(20px,2.1vw,27px)/1.35 var(--serif);color:var(--c100);margin:22px 0 0;max-width:30ch}
+.tagline::before{content:"“";color:var(--brass)}
+.tagline::after{content:"”";color:var(--brass)}
+.lede{color:var(--c82);margin:16px 0 0;max-width:52ch;font-size:17px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.scroll-cue{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font:500 13px/1 var(--sans);color:var(--c64);text-decoration:none}
+.scroll-cue i{width:22px;height:34px;border:1.5px solid var(--c40);border-radius:12px;position:relative}
+.scroll-cue i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:var(--brass);animation:cue 1.8s var(--ease) infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(10px);opacity:0}100%{opacity:0}}
+
+.stay-screen{display:flex;align-items:center;justify-content:flex-end;padding:24px 0 40px}
+.stay-screen .wrap{display:flex;justify-content:flex-end}
+.panel{width:min(470px,100%);background:rgba(28,22,38,.8);border:1px solid rgba(251,245,234,.16);border-radius:24px;padding:24px 24px 22px;backdrop-filter:blur(18px) saturate(1.2);-webkit-backdrop-filter:blur(18px) saturate(1.2);box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.panel h2{text-wrap:balance;font:600 clamp(30px,3vw,40px)/1.05 var(--serif);letter-spacing:-.015em;margin:12px 0 6px}
+.panel .sub{color:var(--c64);font-size:15px;margin:0 0 16px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.tab{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 13px;border-radius:999px;border:1px solid rgba(251,245,234,.22);background:rgba(251,245,234,.04);font:500 14px/1.1 var(--sans);color:var(--c82);transition:background .2s,border-color .2s,color .2s}
+.tab:hover{border-color:var(--c64);color:var(--c100)}
+.tab b{font:600 12px/1 var(--sans);min-width:22px;height:22px;display:inline-grid;place-items:center;border-radius:999px;background:rgba(251,245,234,.12);padding:0 6px}
+.tab[aria-selected="true"]{background:var(--brass);border-color:var(--brass);color:#2a1d05}
+.tab[aria-selected="true"] b{background:rgba(42,29,5,.16)}
+.tab-group{width:100%;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--c40);margin:4px 0 0}
+.tab-group:first-child{margin-top:0}
+.wins{display:flex;align-items:center;gap:6px;margin:0 0 14px;font:500 13px/1 var(--sans);color:var(--c64)}
+.wins i{width:16px;height:20px;border-radius:3px 3px 2px 2px;border:1.5px solid rgba(251,245,234,.35);background:transparent;transition:background .35s,border-color .35s,box-shadow .35s}
+.wins i.on{background:var(--brass);border-color:var(--brass);box-shadow:0 0 12px rgba(243,194,85,.7)}
+.wins span{margin-left:6px}
+.room{display:block}
+.js .room[hidden]{display:none}
+.room h3{font:600 24px/1.15 var(--serif);margin:0 0 4px}
+.room .kick{font:600 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 8px}
+.room p{margin:0 0 12px;color:var(--c82);font-size:15.5px}
+.ticks{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.ticks li{display:inline-flex;align-items:center;gap:7px;font:500 13.5px/1.2 var(--sans);padding:8px 11px;border-radius:999px;background:rgba(251,245,234,.07);border:1px solid rgba(251,245,234,.1)}
+.ticks svg{width:15px;height:15px;color:var(--brass);flex:none}
+.note{font-size:13.5px!important;color:var(--c64)!important;border-left:2px solid var(--brass);padding-left:10px}
+.panel .cta-row{margin-top:6px;gap:10px}
+html:not(.js) .tabs,html:not(.js) .wins{display:none}
+html:not(.js) .panel{max-height:none!important;overflow:visible!important}
+html:not(.js) .room{border-top:1px solid var(--line-d);padding-top:14px;margin-top:14px}
+
+/* ---------- light sections ---------- */
+section{scroll-margin-top:calc(var(--hdr) + 8px)}
+#stay{scroll-margin-top:var(--hdr)}
+@media (max-height:960px) and (min-width:761px){.panel{padding:20px 22px 18px}.panel .sub{display:none}.panel h2{font-size:30px;margin-bottom:14px}.tab-group{display:none}.tabs{margin-bottom:12px}}
+.sec{padding:clamp(72px,10vw,128px) 0}
+.light{background:var(--paper);color:var(--ink)}
+.cream{background:var(--cream);color:var(--ink)}
+.dark{background:linear-gradient(180deg,var(--heather-ink),var(--slate-ink));color:var(--c100)}
+.label{font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sand-deep);display:inline-flex;align-items:center;gap:10px}
+.label::before{content:"";width:28px;height:1px;background:currentColor}
+.dark .label{color:var(--brass)}
+.h2{font:600 clamp(36px,5vw,68px)/1.02 var(--serif);letter-spacing:-.02em;margin:16px 0 0;text-wrap:balance}
+.h2 em{font-style:italic;font-weight:500;color:var(--sand-deep)}
+.dark .h2 em{color:var(--brass)}
+.intro{font-size:18px;color:var(--ink-70);max-width:56ch;margin:18px 0 0}
+.dark .intro{color:var(--c82)}
+
+/* villa */
+.villa-grid{display:grid;gap:clamp(32px,5vw,72px);grid-template-columns:1fr;align-items:center}
+@media (min-width:960px){.villa-grid{grid-template-columns:1.05fr .95fr}}
+.quote{margin:26px 0 0;font:italic 400 clamp(26px,3.1vw,40px)/1.25 var(--serif);letter-spacing:-.01em;color:var(--ink);text-wrap:pretty}
+.quote::before{content:"“";display:block;font:600 84px/0.6 var(--serif);color:var(--sand);margin-bottom:14px;font-style:normal}
+.quote-2{margin:22px 0 0;font-size:18px;color:var(--ink-70);max-width:48ch}
+.quote-2 q{font-style:italic}
+.figs{display:grid;grid-template-columns:repeat(3,1fr);margin-top:34px;border-top:1px solid var(--line-l)}
+.figs div{padding:18px 14px 0 0}
+.figs div+div{padding-left:16px;border-left:1px solid var(--line-l)}
+.figs b{display:block;font:600 clamp(38px,4.4vw,60px)/1 var(--serif);color:var(--heather-deep);letter-spacing:-.02em}
+.figs span{display:block;margin-top:8px;font:500 14px/1.35 var(--sans);color:var(--ink-70)}
+.photo-pair{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:14px;align-items:end}
+.ph{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:var(--cream-2)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{position:absolute;left:10px;bottom:10px;font:500 12px/1 var(--sans);color:#fff;background:rgba(23,18,31,.6);padding:6px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.photo-pair .ph:first-child{aspect-ratio:4/5}
+.photo-pair .ph:last-child{aspect-ratio:3/4;transform:translateY(-34px)}
+.stamp{position:absolute;right:-6px;top:-18px;width:118px;height:118px;border-radius:50%;background:var(--heather-deep);color:var(--cream);display:grid;place-items:center;text-align:center;font:600 13px/1.25 var(--sans);letter-spacing:.06em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(42,34,56,.7);transform:rotate(-8deg)}
+.stamp b{display:block;font:italic 500 26px/1 var(--serif);text-transform:none;letter-spacing:0;color:var(--brass)}
+
+/* good to know */
+.gtk-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
+.gtk{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:40px}
+.gk{position:relative;text-align:left;border:1px solid var(--line-l);background:#fffdf8;border-radius:var(--r);padding:20px 18px 18px;min-height:208px;display:flex;flex-direction:column;gap:12px;transition:transform .25s var(--ease),box-shadow .25s,background .3s,border-color .3s}
+.gk:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px rgba(42,34,56,.45)}
+.gk .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--cream-2);color:var(--heather-deep);transition:background .3s,color .3s}
+.gk .ic svg{width:24px;height:24px}
+.gk .q{font:600 21px/1.2 var(--serif);margin:0}
+.gk .a{font-size:15px;line-height:1.5;color:var(--ink-70);margin:0;display:none}
+.gk .tap{margin-top:auto;font:600 12.5px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--sand-deep);display:flex;align-items:center;gap:8px}
+.gk .mark{position:absolute;right:16px;top:18px;width:30px;height:30px;border-radius:50%;display:none;place-items:center}
+.gk .mark svg{width:16px;height:16px}
+.gk[aria-pressed="true"]{background:var(--heather-ink);border-color:var(--heather-ink);color:var(--c100)}
+.gk[aria-pressed="true"] .ic{background:rgba(251,245,234,.1);color:var(--brass)}
+.gk[aria-pressed="true"] .a{display:block;color:var(--c82)}
+.gk[aria-pressed="true"] .tap{color:var(--c64)}
+.gk[aria-pressed="true"] .mark{display:grid}
+.mark.yes{background:var(--brass);color:#2a1d05}
+.mark.no{background:rgba(251,245,234,.14);color:var(--c100)}
+.mark.info{background:var(--sand);color:#2a1d05}
+html:not(.js) .gk .a{display:block}
+html:not(.js) .gk .tap{display:none}
+.park{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:14px;padding:16px 18px;border-radius:var(--r);background:#fffdf8;border:1px dashed rgba(159,108,67,.45)}
+.park p{margin:0;font-size:15.5px;color:var(--ink-70)}
+.switch{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 4px;border:0;background:none;font:600 15px/1.2 var(--sans);color:var(--ink);text-align:left}
+.switch i{position:relative;width:52px;height:30px;border-radius:999px;background:#d9cdb8;transition:background .25s;flex:none}
+.switch i::after{content:"";position:absolute;left:3px;top:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.2);transition:transform .25s var(--ease)}
+.switch[aria-pressed="true"] i{background:var(--heather-deep)}
+.switch[aria-pressed="true"] i::after{transform:translateX(22px);background:var(--brass)}
+html:not(.js) .park,html:not(.js) #gtk-all{display:none}
+
+/* getting here */
+.here-grid{display:grid;gap:18px;margin-top:44px;grid-template-columns:1fr}
+@media (min-width:980px){.here-grid{grid-template-columns:1.1fr .9fr}}
+.card-d{background:rgba(251,245,234,.05);border:1px solid var(--line-d);border-radius:24px;padding:clamp(20px,3vw,32px)}
+.card-d h3{font:600 26px/1.15 var(--serif);margin:10px 0 6px}
+.card-d .k{font:600 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.card-d p{color:var(--c82);margin:0 0 14px;font-size:16px}
+.routes{display:grid;grid-template-columns:1fr;gap:14px;align-items:center}
+@media (min-width:640px){.routes{grid-template-columns:1fr 1fr}}
+.sketch{width:100%;height:auto;max-height:380px}
+.sketch .rt{fill:none;stroke:rgba(251,245,234,.22);stroke-width:2;stroke-dasharray:4 6;transition:stroke .4s}
+.sketch .rt.on{stroke:var(--brass);stroke-width:3;stroke-dasharray:none;animation:draw 1s var(--ease)}
+@keyframes draw{from{stroke-dasharray:400;stroke-dashoffset:400}to{stroke-dasharray:400;stroke-dashoffset:0}}
+.sketch circle.d{fill:var(--c64)}
+.sketch circle.d.on{fill:var(--brass)}
+.sketch text{font:500 13px var(--sans);fill:var(--c82)}
+.sketch text.on{fill:var(--brass);font-weight:600}
+.sketch .oban{fill:var(--brass)}
+.dest{display:grid;gap:8px}
+.dest button,.walk-chips button{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:48px;padding:0 16px;border-radius:14px;border:1px solid var(--line-d);background:rgba(251,245,234,.04);font:500 15.5px/1.2 var(--sans);color:var(--c82);text-align:left;transition:background .2s,border-color .2s,color .2s}
+.dest button:hover,.walk-chips button:hover{border-color:var(--c64);color:var(--c100)}
+.dest button[aria-pressed="true"],.walk-chips button[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:#2a1d05}
+.dest button svg{width:16px;height:16px}
+.small{font-size:13px!important;color:var(--c64)!important;margin:12px 0 0!important}
+.walk-chips{display:grid;gap:8px;margin:16px 0 8px}
+.meter{position:relative;padding:22px 0 8px}
+.meter .big{font:600 clamp(64px,8vw,96px)/.9 var(--serif);letter-spacing:-.03em;color:var(--c100)}
+.meter .big small{font:500 17px/1 var(--sans);letter-spacing:0;color:var(--c64);margin-left:8px}
+.track{position:relative;height:46px;margin-top:18px}
+.track .base{position:absolute;left:0;right:0;top:20px;height:0;border-top:2px dashed rgba(251,245,234,.24)}
+.track .band{position:absolute;top:13px;height:16px;border-radius:999px;background:rgba(243,194,85,.28);border:1px solid var(--brass);transition:left .7s var(--ease),width .7s var(--ease)}
+.track .from,.track .to{position:absolute;top:10px;width:22px;height:22px;border-radius:50%;margin-left:-11px}
+.track .from{left:0;background:var(--c100);box-shadow:0 0 0 4px rgba(251,245,234,.15)}
+.track .to{background:var(--brass);box-shadow:0 0 0 5px rgba(243,194,85,.25);transition:left .7s var(--ease)}
+.ticksx{display:flex;justify-content:space-between;font:500 12px/1 var(--sans);color:var(--c40);margin-top:2px}
+.track-lab{display:flex;justify-content:space-between;font:600 12.5px/1.2 var(--sans);color:var(--c82);margin-top:10px}
+.mapbox{margin-top:18px;border-radius:24px;overflow:hidden;border:1px solid var(--line-d);background:rgba(251,245,234,.04);display:grid;grid-template-columns:1fr}
+@media (min-width:900px){.mapbox{grid-template-columns:.8fr 1.2fr}}
+.mapinfo{padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:12px}
+.mapinfo h3{font:600 26px/1.15 var(--serif);margin:0}
+.mapinfo address{font-style:normal;color:var(--c82)}
+.mapframe{position:relative;min-height:320px;background:
+  radial-gradient(circle at 30% 40%,rgba(243,194,85,.16),transparent 40%),
+  repeating-linear-gradient(0deg,rgba(251,245,234,.05) 0 1px,transparent 1px 38px),
+  repeating-linear-gradient(90deg,rgba(251,245,234,.05) 0 1px,transparent 1px 38px),#221c2e;display:grid;place-items:center}
+.mapframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapframe .pin{display:grid;justify-items:center;gap:14px;text-align:center;padding:20px}
+.mapframe .pin svg{width:40px;height:40px;color:var(--brass)}
+.mapframe .pin p{margin:0;color:var(--c64);font-size:14px;max-width:30ch}
+
+/* gallery */
+.gal{display:grid;gap:12px;margin-top:40px;grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+@media (min-width:860px){.gal{grid-template-columns:repeat(6,1fr);grid-auto-rows:170px}}
+.gal button{position:relative;padding:0;border:0;border-radius:var(--r);overflow:hidden;background:var(--cream-2)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.gal button:hover img{transform:scale(1.045)}
+.gal figcaption,.gal .cap{position:absolute;left:10px;bottom:10px;font:500 12px/1.2 var(--sans);color:#fff;background:rgba(23,18,31,.62);padding:6px 9px;border-radius:999px;text-align:left}
+.g1{grid-column:span 2;grid-row:span 2}
+@media (min-width:860px){.g1{grid-column:span 4;grid-row:span 2}.g2,.g3,.g4,.g5{grid-column:span 2;grid-row:span 2}}
+.lb{position:fixed;inset:0;z-index:120;background:rgba(15,11,20,.94);display:none;align-items:center;justify-content:center;padding:56px 16px 90px}
+.lb.open{display:flex}
+.lb img{max-width:min(1200px,100%);max-height:100%;object-fit:contain;border-radius:12px}
+.lb .lbcap{position:absolute;left:0;right:0;bottom:30px;text-align:center;color:var(--c82);font-size:14px;padding:0 80px}
+.lb button{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid rgba(251,245,234,.3);background:rgba(251,245,234,.08);color:#fff;display:grid;place-items:center}
+.lb button:hover{background:rgba(251,245,234,.2)}
+.lb button svg{width:22px;height:22px}
+.lb .x{top:14px;right:14px}.lb .pv{left:14px;bottom:18px}.lb .nx{right:14px;bottom:18px}
+@media (min-width:860px){.lb .pv{left:24px;top:50%;bottom:auto;transform:translateY(-50%)}.lb .nx{right:24px;top:50%;bottom:auto;transform:translateY(-50%)}}
+
+/* faq */
+.faq-grid{display:grid;gap:clamp(28px,5vw,72px);grid-template-columns:1fr}
+@media (min-width:960px){.faq-grid{grid-template-columns:.8fr 1.2fr}}
+.faq details{border-bottom:1px solid var(--line-l)}
+@media (min-width:960px){.faq-grid>div:first-child{position:sticky;top:calc(var(--hdr) + 32px);align-self:start}}
+.contact-card{align-self:start}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 2px;font:600 clamp(19px,1.8vw,22px)/1.3 var(--serif)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line-l);display:grid;place-items:center;transition:transform .3s var(--ease),background .2s}
+.faq summary i svg{width:14px;height:14px}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--brass);border-color:var(--brass)}
+.faq summary:hover i{border-color:var(--ink)}
+.faq details p{margin:0 0 20px;color:var(--ink-70);max-width:62ch}
+
+/* enquire */
+.enq-grid{display:grid;gap:18px;grid-template-columns:1fr;margin-top:44px}
+@media (min-width:980px){.enq-grid{grid-template-columns:1.25fr .75fr}}
+.helper{background:#fffdf8;border:1px solid var(--line-l);border-radius:24px;padding:clamp(20px,3vw,34px);box-shadow:0 30px 70px -50px rgba(42,34,56,.6)}
+.steps{display:flex;gap:6px;margin-bottom:22px}
+.steps i{flex:1;height:4px;border-radius:4px;background:var(--cream-2);transition:background .3s}
+.steps i.on{background:var(--heather-deep)}
+.step h3{font:600 clamp(24px,2.4vw,30px)/1.15 var(--serif);margin:0 0 6px}
+.step .hint{color:var(--ink-50);font-size:14.5px;margin:0 0 18px}
+.js .step[hidden]{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{min-height:46px;padding:0 16px;border-radius:999px;border:1px solid var(--line-l);background:#fff;font:500 15px/1.15 var(--sans);transition:background .2s,border-color .2s,color .2s,transform .15s}
+.chip:hover{border-color:var(--ink)}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{background:var(--heather-ink);border-color:var(--heather-ink);color:var(--c100)}
+.chip.flat{border-style:dashed}
+.chips-group{font:600 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50);margin:16px 0 10px}
+.chips-group:first-of-type{margin-top:0}
+.nav-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:24px}
+.back{border:0;background:none;font:600 14.5px/1 var(--sans);color:var(--ink-70);display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 6px}
+.back:hover{color:var(--ink)}
+.back svg{width:16px;height:16px}
+.msg{white-space:pre-wrap;font:400 14.5px/1.55 var(--sans);background:var(--cream);border:1px solid var(--line-l);border-radius:14px;padding:16px 18px;margin:0 0 16px;max-height:300px;overflow:auto}
+.to-line{font-size:14px;color:var(--ink-70);margin:0 0 8px}
+.to-line b{color:var(--ink)}
+.fine{font-size:13px;color:var(--ink-50);margin:14px 0 0}
+.nojs-contact{display:none}
+html:not(.js) .helper .steps,html:not(.js) .helper .step{display:none}
+html:not(.js) .nojs-contact{display:block}
+.contact-card{background:var(--heather-ink);color:var(--c100);border-radius:24px;padding:clamp(20px,3vw,30px);display:flex;flex-direction:column;gap:6px}
+.contact-card h3{font:600 26px/1.15 var(--serif);margin:0 0 8px}
+.crow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-top:1px solid var(--line-d)}
+.crow div{min-width:0}
+.crow small{display:block;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--c40);margin-bottom:6px}
+.crow a,.crow span.v{font:500 16px/1.3 var(--sans);text-decoration:none;word-break:break-word}
+.crow a:hover{color:var(--brass)}
+.copy{flex:none;min-height:40px;padding:0 13px;border-radius:999px;border:1px solid rgba(251,245,234,.28);background:transparent;color:var(--c100);font:600 13px/1 var(--sans);display:inline-flex;align-items:center;gap:6px;transition:background .2s,border-color .2s}
+.copy:hover{border-color:var(--c100)}
+.copy.done{background:var(--brass);color:#2a1d05;border-color:var(--brass)}
+.copy svg{width:14px;height:14px}
+.helper .copy{color:var(--ink);border-color:var(--line-l)}
+.helper .copy:hover{border-color:var(--ink)}
+.helper .copy.done{color:#2a1d05;border-color:var(--brass)}
+html:not(.js) .copy{display:none}
+
+/* footer + phone bar */
+footer{background:#17121f;color:var(--c64);padding:56px 0 48px;font-size:14px}
+footer .wrap{display:grid;gap:16px}
+footer .fb{font:600 32px/1 var(--serif);color:var(--c100)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:var(--c100)}
+footer hr{border:0;border-top:1px solid var(--line-d);width:100%;margin:6px 0}
+footer p{margin:0}
+.mbar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:80;display:none;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px;border-radius:20px;background:rgba(26,20,34,.92);border:1px solid var(--line-d);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 18px 40px -16px rgba(0,0,0,.7)}
+.mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:52px;border-radius:14px;text-decoration:none;color:var(--c100);font:600 12.5px/1 var(--sans)}
+.mbar a svg{width:20px;height:20px}
+.mbar a:first-child{background:var(--brass);color:#2a1d05}
+.mbar a:active{background:rgba(251,245,234,.12)}
+@media (max-width:860px){.mbar{display:grid}footer{padding-bottom:120px}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .ld{opacity:0;transform:translateY(16px);animation:ld .75s var(--ease) forwards;animation-delay:calc(.15s + var(--i,0)*.09s)}
+@keyframes ld{to{opacity:1;transform:none}}
+
+/* phone tuning */
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .ribbon{font-size:11.5px;padding:6px 12px}
+  :root{--hh:58px}
+  .brand b{font-size:23px}
+  .hero-screen{align-items:flex-start;padding:58px 0 120px}
+  .scrim{background:linear-gradient(180deg,rgba(23,18,31,.82) 0%,rgba(23,18,31,.5) 38%,rgba(23,18,31,0) 60%),linear-gradient(0deg,rgba(23,18,31,.55) 0%,rgba(23,18,31,0) 26%)}
+  .scene.explore .scrim{opacity:.35}
+  .tagline{margin-top:16px}
+  .lede{font-size:15.5px;margin-top:10px}
+  .cta-row{margin-top:18px}
+  .scroll-cue{display:none}
+  .ill-label{top:10px;bottom:auto;left:12px;right:12px;font-size:11px;padding:6px 10px;text-align:center;max-width:none}
+  .stay-screen{align-items:flex-end;padding:0 0 84px}
+  .panel{padding:14px 14px 12px;border-radius:20px;max-height:47svh;overflow:auto;background:rgba(28,22,38,.9);overscroll-behavior:contain}
+  .panel h2{display:none}
+  .panel>.eyebrow{margin-bottom:10px}
+  .room .ticks{display:none}
+  .panel .eyebrow{font-size:11px}
+  .tabs{margin-bottom:10px}
+  .tab{min-height:40px;font-size:13.5px}
+  .wins{margin-bottom:8px}
+  .wins i{width:13px;height:17px}
+  .room .kick{display:none}
+  .room h3{font-size:20px}
+  .room p{font-size:14.5px;margin-bottom:8px}
+  .ticks{gap:5px;margin-bottom:8px}
+  .ticks li{font-size:12.5px;padding:6px 9px}
+  .note{font-size:12.5px!important}
+  .panel .cta-row{margin-top:2px}
+  .panel .sub{display:none}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding:0 16px 2px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none}
+  .tab-group{display:none}
+  .drag-hint{display:none!important}
+  .photo-pair .ph:last-child{transform:translateY(-20px)}
+  .stamp{width:96px;height:96px;font-size:11px;right:-4px}
+  .stamp b{font-size:21px}
+  .figs b{font-size:36px}
+  .gtk{grid-template-columns:1fr 1fr;gap:10px}
+  .gk{min-height:0;padding:16px 14px 14px}
+  .gk:last-child{grid-column:span 2}
+  .dest{grid-template-columns:1fr 1fr}
+  .dest button{min-height:46px;font-size:14.5px;padding:0 12px}
+  .gk .q{font-size:18px}
+  .gk .ic{width:40px;height:40px}
+  .gk .mark{right:12px;top:14px}
+}
+@media (max-width:420px){.h1{font-size:46px}.tagline{font-size:19px}.lede{font-size:14.5px;line-height:1.5}.hero-copy .cta-row .btn{min-height:44px;padding:0 16px;font-size:14px}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .ld{opacity:1;transform:none}
+}
+.poster-mode header.top,.poster-mode .ribbon,.poster-mode .screen,.poster-mode .ill-label,.poster-mode .scrim,.poster-mode .drag-hint,.poster-mode .mbar,.poster-mode .progress{visibility:hidden}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<a class="skip" href="#villa">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="topbar" id="topbar">
+<div class="ribbon">Concept redesign by Jeig Torio · not the business's official website</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sandvilla Guest House, back to top"><b>Sandvilla</b><span>Guest House · Oban</span></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#villa">The villa</a>
+      <a href="#stay">Rooms &amp; flat</a>
+      <a href="#good">Good to know</a>
+      <a href="#here">Getting here</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-brass btn-sm" href="#enquire">Enquire</a>
+      <a class="btn btn-ghost btn-sm" href="tel:+441631564483" aria-label="Call +44 1631 564483"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>Call</span></a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+</div>
+
+<main>
+<section class="scene" id="scene" aria-label="Sandvilla Guest House">
+  <div class="stage" id="stage">
+    <img class="poster" src="assets/poster.webp" alt="Illustration: a Victorian sandstone terraced villa at dusk with six warmly lit windows, a slate roof, chimney pots and steps up to the front door" width="1600" height="1000" fetchpriority="high">
+    <div class="scrim"></div>
+    <div class="tags" id="tags" aria-hidden="true"><span class="tag" id="tag-lock">Self check-in by lockbox</span></div>
+    <p class="ill-label" id="ill-label">Illustration: which window belongs to which room is not shown</p>
+    <p class="drag-hint" id="drag-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h8M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg>Drag to look around</p>
+  </div>
+
+  <div class="screen hero-screen" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow ld" style="--i:0">Oban · Argyll · the west coast</span>
+        <h1 class="h1 ld" style="--i:1">Sandvilla <em>Guest House</em></h1>
+        <p class="tagline ld" style="--i:2">The perfect choice for your stay on the west coast.</p>
+        <p class="lede ld" style="--i:3">Six en-suite rooms in a mid-terraced Victorian sandstone villa, let on a room only basis. Plus <strong>9INE</strong>, a two-bedroom flat with self check-in.</p>
+        <div class="cta-row ld" style="--i:4">
+          <a class="btn btn-brass" href="#stay">Choose a room or the flat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+          <a class="btn btn-ghost" href="tel:+441631564483">Call +44 1631 564483</a>
+        </div>
+        <a class="scroll-cue ld" style="--i:5" href="#stay"><i aria-hidden="true"></i>Scroll and the villa turns to face you</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen stay-screen" id="stay">
+    <div class="wrap">
+      <div class="panel" id="panel">
+        <span class="eyebrow">Room or whole flat?</span>
+        <h2>Pick one. Watch the villa light up.</h2>
+        <p class="sub">Each room type lights that many windows. Choose 9INE and we'll take you across to the flat.</p>
+        <div class="tabs" role="tablist" aria-label="Rooms and flat">
+          <p class="tab-group" aria-hidden="true">At the villa</p>
+          <button class="tab" role="tab" id="t-all" aria-controls="p-all" aria-selected="true" data-type="all">All six rooms <b>6</b></button>
+          <button class="tab" role="tab" id="t-king" aria-controls="p-king" aria-selected="false" tabindex="-1" data-type="king">King-size <b>2</b></button>
+          <button class="tab" role="tab" id="t-double" aria-controls="p-double" aria-selected="false" tabindex="-1" data-type="double">Double with king-size bed <b>3</b></button>
+          <button class="tab" role="tab" id="t-single" aria-controls="p-single" aria-selected="false" tabindex="-1" data-type="single">Single <b>1</b></button>
+          <p class="tab-group" aria-hidden="true">Self-catering</p>
+          <button class="tab" role="tab" id="t-flat" aria-controls="p-flat" aria-selected="false" tabindex="-1" data-type="flat">9INE flat <b>2 bed</b></button>
+        </div>
+        <div class="wins" id="wins" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><span id="wins-txt">6 of 6 windows lit</span></div>
+
+        <div class="room" role="tabpanel" id="p-all" aria-labelledby="t-all">
+          <p class="kick">The villa · six en-suite rooms</p>
+          <h3>Six rooms, each with its own shower room</h3>
+          <p>2 king-size bedrooms (one on the ground floor), 3 double bedrooms with king-size beds and 1 single.</p>
+          <ul class="ticks" aria-label="In every room">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Shower en suite</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>TV</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hairdryer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hospitality tray</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Toiletries</li>
+          </ul>
+          <p class="note">Room only: “Accommodation is let on a room only basis, we do not provide breakfast.”</p>
+          <div class="cta-row"><a class="btn btn-brass btn-sm" href="#enquire" data-ask="notsure">Ask about a room</a><a class="btn btn-ghost btn-sm" href="tel:+441631564483">Call</a></div>
+        </div>
+
+        <div class="room" role="tabpanel" id="p-king" aria-labelledby="t-king" hidden>
+          <p class="kick">2 rooms</p>
+          <h3>King-size bedroom</h3>
+          <p>There are two king-size bedrooms, and one of them is on the ground floor.</p>
+          <ul class="ticks" aria-label="In the room">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Shower en suite</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>TV</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hairdryer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hospitality tray</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Toiletries</li>
+          </ul>
+          <p class="note">Ask for the ground-floor room when you enquire. Room only, no breakfast.</p>
+          <div class="cta-row"><a class="btn btn-brass btn-sm" href="#enquire" data-ask="king">Ask about a king-size room</a></div>
+        </div>
+
+        <div class="room" role="tabpanel" id="p-double" aria-labelledby="t-double" hidden>
+          <p class="kick">3 rooms</p>
+          <h3>Double bedroom with a king-size bed</h3>
+          <p>Three double bedrooms, each with a king-size bed.</p>
+          <ul class="ticks" aria-label="In the room">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Shower en suite</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>TV</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hairdryer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hospitality tray</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Toiletries</li>
+          </ul>
+          <p class="note">Room only, no breakfast.</p>
+          <div class="cta-row"><a class="btn btn-brass btn-sm" href="#enquire" data-ask="double">Ask about a double room</a></div>
+        </div>
+
+        <div class="room" role="tabpanel" id="p-single" aria-labelledby="t-single" hidden>
+          <p class="kick">1 room</p>
+          <h3>Single bedroom</h3>
+          <p>One single bedroom.</p>
+          <ul class="ticks" aria-label="In the room">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Shower en suite</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>TV</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hairdryer</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Hospitality tray</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Toiletries</li>
+          </ul>
+          <p class="note">Room only, no breakfast.</p>
+          <div class="cta-row"><a class="btn btn-brass btn-sm" href="#enquire" data-ask="single">Ask about the single room</a></div>
+        </div>
+
+        <div class="room" role="tabpanel" id="p-flat" aria-labelledby="t-flat" hidden>
+          <p class="kick">Self-catering · the whole flat</p>
+          <h3>9INE, a two-bedroom flat</h3>
+          <p>Up to 4 people, adults and children welcome. Let yourself in with the lockbox and cook in your own full kitchen.</p>
+          <ul class="ticks" aria-label="The flat">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Two bedrooms</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Up to 4 people</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Self check-in by lockbox</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Full kitchen</li>
+          </ul>
+          <p class="note">Bus and train stations: 1–2 minutes' walk. CalMac ferry terminal: 4–5 minutes' walk.</p>
+          <div class="cta-row"><a class="btn btn-brass btn-sm" href="#enquire" data-ask="flat">Ask about 9INE</a><a class="btn btn-ghost btn-sm" href="#here">Walking times</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="villa">
+  <div class="wrap villa-grid">
+    <div class="rv">
+      <span class="label">The villa</span>
+      <blockquote class="quote">A warm west coast welcome to Sandvilla Guesthouse in Oban, a mid-terraced Victorian sandstone villa.</blockquote>
+      <p class="quote-2"><q>Our aim is to offer you a home from home experience while here on your travels.</q></p>
+      <div class="figs">
+        <div><b>6</b><span>en-suite rooms in the villa</span></div>
+        <div><b>1</b><span>two-bedroom flat, 9INE</span></div>
+        <div><b>2</b><span>parking spaces to pre-book</span></div>
+      </div>
+    </div>
+    <div class="photo-pair rv">
+      <figure class="ph"><img src="assets/room-lamp.webp" alt="A made bed beside a lit bedside lamp in a dim bedroom" width="1100" height="1174" loading="lazy"><figcaption>Concept photo.</figcaption></figure>
+      <figure class="ph"><img src="assets/tray.webp" alt="Cups of tea on a wooden tray" width="1100" height="580" loading="lazy" style="object-position:40% 50%"><figcaption>Concept photo.</figcaption></figure>
+      <div class="stamp" aria-hidden="true"><div><b>Room</b>only<br>basis</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cream" id="good">
+  <div class="wrap">
+    <div class="gtk-head rv">
+      <div>
+        <span class="label">Good to know</span>
+        <h2 class="h2">Before you book, <em>tap what matters.</em></h2>
+        <p class="intro">Five quick answers from the guesthouse. Tap a card to flip it.</p>
+      </div>
+      <button class="btn btn-line btn-sm" id="gtk-all" aria-pressed="false">Show all answers</button>
+    </div>
+    <div class="gtk">
+      <button class="gk rv" aria-pressed="false" data-k="car">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M6 17v2M18 17v2M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/></svg></span>
+        <span class="mark info" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 11v6M12 7h.01"/></svg></span>
+        <span class="q">Coming by car?</span>
+        <span class="a">Limited private parking: 2 spaces, and they're pre-bookable. Ask for one when you enquire.</span>
+        <span class="tap">Tap to flip</span>
+      </button>
+      <button class="gk rv" aria-pressed="false" data-k="breakfast">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3"/></svg></span>
+        <span class="mark no" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        <span class="q">Is breakfast included?</span>
+        <span class="a">“Accommodation is let on a room only basis, we do not provide breakfast.”</span>
+        <span class="tap">Tap to flip</span>
+      </button>
+      <button class="gk rv" aria-pressed="false" data-k="pets">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="10" r="2"/><circle cx="9" cy="5.5" r="2"/><circle cx="15" cy="5.5" r="2"/><circle cx="18.5" cy="10" r="2"/><path d="M12 12c-3 0-5 3.5-5 5.5S9 20 12 19c3 1 5 .5 5-1.5S15 12 12 12z"/></svg></span>
+        <span class="mark no" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        <span class="q">Bringing a pet?</span>
+        <span class="a">Sorry, no pets.</span>
+        <span class="tap">Tap to flip</span>
+      </button>
+      <button class="gk rv" aria-pressed="false" data-k="wifi">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/></svg></span>
+        <span class="mark yes" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+        <span class="q">Need WiFi?</span>
+        <span class="a">Yes: free WiFi.</span>
+        <span class="tap">Tap to flip</span>
+      </button>
+      <button class="gk rv" aria-pressed="false" data-k="smoking">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15h13v3H3zM19 15v3M21.5 15v3M18 4c0 2 2 2 2 4M21 4c0 2 1.5 2 1.5 4"/><path d="M3 3l18 18"/></svg></span>
+        <span class="mark no" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+        <span class="q">Can I smoke?</span>
+        <span class="a">No. Sandvilla is non-smoking.</span>
+        <span class="tap">Tap to flip</span>
+      </button>
+    </div>
+    <div class="park rv">
+      <p>Driving? The two private spaces are pre-bookable.</p>
+      <button class="switch" id="park-switch" aria-pressed="false"><i aria-hidden="true"></i><span>Add a parking question to my enquiry</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="here">
+  <div class="wrap">
+    <div class="rv">
+      <span class="label">Getting here without a car</span>
+      <h2 class="h2">Trains, buses <em>and the ferry.</em></h2>
+    </div>
+    <div class="here-grid">
+      <div class="card-d rv">
+        <span class="k">From Oban</span>
+        <h3>“Easy transport”</h3>
+        <p>As Sandvilla's homepage puts it: trains and buses to Glasgow, Edinburgh, Fort William and Inverness. Tap a place.</p>
+        <div class="routes">
+          <svg class="sketch" viewBox="0 0 360 340" role="img" aria-labelledby="sk-t">
+            <title id="sk-t">Sketch, not to scale: Oban with lines to Fort William, Inverness, Glasgow and Edinburgh</title>
+            <path d="M40 300 C 60 240, 30 200, 70 170 S 60 90, 110 60 S 150 20, 200 18" fill="none" stroke="rgba(251,245,234,.1)" stroke-width="1.5"/>
+            <path class="rt" data-r="fw" d="M92 188 C 110 160, 120 132, 140 112"/>
+            <path class="rt" data-r="inv" d="M92 188 C 140 140, 210 90, 278 52"/>
+            <path class="rt" data-r="gla" d="M92 188 C 120 220, 160 250, 196 262"/>
+            <path class="rt" data-r="edi" d="M92 188 C 160 210, 250 230, 300 240"/>
+            <circle class="d" data-r="fw" cx="140" cy="112" r="6"/>
+            <circle class="d" data-r="inv" cx="278" cy="52" r="6"/>
+            <circle class="d" data-r="gla" cx="196" cy="262" r="6"/>
+            <circle class="d" data-r="edi" cx="300" cy="240" r="6"/>
+            <circle class="oban" cx="92" cy="188" r="9"/>
+            <circle cx="92" cy="188" r="16" fill="none" stroke="#f3c255" stroke-opacity=".4"/>
+            <text x="48" y="218" style="fill:#f3c255;font-weight:600">Oban</text>
+            <text data-r="fw" x="152" y="116">Fort William</text>
+            <text data-r="inv" x="262" y="34">Inverness</text>
+            <text data-r="gla" x="176" y="288">Glasgow</text>
+            <text data-r="edi" x="268" y="266">Edinburgh</text>
+          </svg>
+          <div class="dest" role="group" aria-label="Destinations">
+            <button aria-pressed="false" data-r="gla">Glasgow <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button aria-pressed="false" data-r="edi">Edinburgh <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button aria-pressed="false" data-r="fw">Fort William <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button aria-pressed="false" data-r="inv">Inverness <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <p class="small">Sketch, not to scale. Lines show places, not routes. Ask the guesthouse or check timetables before you travel.</p>
+      </div>
+
+      <div class="card-d rv" id="walk">
+        <span class="k">From the 9INE flat</span>
+        <h3>Minutes on foot</h3>
+        <p>Walking times listed for the 9INE flat.</p>
+        <div class="walk-chips" role="group" aria-label="Walk to">
+          <button aria-pressed="true" data-w="bus">Bus station <span>1–2 min</span></button>
+          <button aria-pressed="false" data-w="train">Train station <span>1–2 min</span></button>
+          <button aria-pressed="false" data-w="ferry">CalMac ferry terminal <span>4–5 min</span></button>
+        </div>
+        <div class="meter" aria-live="polite">
+          <div class="big" id="walk-big">1–2<small>minutes' walk</small></div>
+          <div class="track" aria-hidden="true"><span class="base"></span><span class="band" id="walk-band" style="left:20%;width:20%"></span><span class="from"></span><span class="to" id="walk-to" style="left:40%"></span></div>
+          <div class="ticksx" aria-hidden="true"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5 min</span></div>
+          <div class="track-lab"><span>9INE flat</span><span id="walk-lab">Bus station</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mapbox rv">
+      <div class="mapinfo">
+        <span class="label">Find the guesthouse</span>
+        <h3>Sandvilla Guest House</h3>
+        <address>Breadalbane Street, Oban PA34 5PE</address>
+        <div class="cta-row" style="margin-top:6px">
+          <button class="btn btn-brass btn-sm" id="map-btn" type="button">Show map</button>
+          <a class="btn btn-ghost btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=Sandvilla+Guest+House+Oban" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <p class="small" style="margin-top:4px!important">The map loads from Google only when you tap “Show map”.</p>
+      </div>
+      <div class="mapframe" id="mapframe">
+        <div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><p>Tap “Show map” to load Google Maps for Sandvilla Guest House, Oban.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="gallery">
+  <div class="wrap">
+    <div class="rv">
+      <span class="label">Gallery</span>
+      <h2 class="h2">An evening <em>in.</em></h2>
+      <p class="intro">Stock concept photos for now, ready to be swapped for the guesthouse's own.</p>
+    </div>
+    <div class="gal" id="gal">
+      <button class="g1 rv" data-i="0" aria-label="Open photo 1 of 5"><img src="assets/room-evening.webp" alt="A bedroom in lamplight with a padded headboard and an armchair" width="1400" height="934" loading="lazy"><span class="cap">Concept photo.</span></button>
+      <button class="g2 rv" data-i="1" aria-label="Open photo 2 of 5"><img src="assets/tray.webp" alt="Cups of tea on a wooden tray" width="1100" height="580" loading="lazy"><span class="cap">Concept photo.</span></button>
+      <button class="g3 rv" data-i="2" aria-label="Open photo 3 of 5"><img src="assets/shower.webp" alt="A white tiled shower with a chrome rail" width="1100" height="734" loading="lazy" style="object-position:30% 50%"><span class="cap">Concept photo.</span></button>
+      <button class="g4 rv" data-i="3" aria-label="Open photo 4 of 5"><img src="assets/room-lamp.webp" alt="A bed beside a lit bedside lamp" width="1100" height="1174" loading="lazy" style="object-position:50% 40%"><span class="cap">Concept photo.</span></button>
+      <button class="g5 rv" data-i="4" aria-label="Open photo 5 of 5"><img src="assets/flat-kitchen.webp" alt="A kitchen with a wooden dresser and a sash window" width="1100" height="1212" loading="lazy" style="object-position:50% 45%"><span class="cap">Concept photo.</span></button>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+  <img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="">
+  <p class="lbcap" id="lb-cap"></p>
+  <button class="x" id="lb-x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="pv" id="lb-pv" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="nx" id="lb-nx" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<section class="sec cream" id="faq">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <span class="label">Questions</span>
+      <h2 class="h2">Asked <em>before arriving.</em></h2>
+      <p class="intro">Anything else, ask the guesthouse directly.</p>
+      <div class="cta-row"><a class="btn btn-ink" href="tel:+441631564483">Call +44 1631 564483</a><a class="btn btn-line" href="mailto:sandvilla@holidayoban.co.uk">Email</a></div>
+    </div>
+    <div class="faq rv">
+      <details><summary>Is breakfast included?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>No. “Accommodation is let on a room only basis, we do not provide breakfast.”</p></details>
+      <details><summary>What's in the rooms?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Every room has a shower en suite, a TV, a hairdryer, a hospitality tray and toiletries.</p></details>
+      <details><summary>Is there a ground-floor room?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Yes: one of the two king-size bedrooms is on the ground floor. Mention it when you call or email.</p></details>
+      <details><summary>Is there parking?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Limited private parking: 2 spaces, pre-bookable. Ask for one when you enquire.</p></details>
+      <details><summary>Can I bring my dog?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Sorry, no pets.</p></details>
+      <details><summary>Is there WiFi? Can I smoke?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>WiFi is free. Sandvilla is non-smoking.</p></details>
+      <details><summary>How many people can stay in 9INE?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>The flat has two bedrooms and sleeps up to 4 people. Adults and children are welcome.</p></details>
+      <details><summary>How do I get into 9INE?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Self check-in by lockbox. The flat also has a full kitchen.</p></details>
+      <details><summary>How far is 9INE from the stations and the ferry?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>The bus and train stations are 1–2 minutes' walk from the flat, and the CalMac ferry terminal is 4–5 minutes' walk.</p></details>
+      <details><summary>Can I travel on without a car?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Their homepage lists easy transport: trains and buses to Glasgow, Edinburgh, Fort William and Inverness.</p></details>
+      <details><summary>What about prices and dates?<i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>Ask us: call +44 1631 564483 or email sandvilla@holidayoban.co.uk with your dates.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="enquire">
+  <div class="wrap">
+    <div class="rv">
+      <span class="label">Enquire</span>
+      <h2 class="h2">Three taps, <em>one ready email.</em></h2>
+      <p class="intro">Choose what you'd like, a rough month and how many of you. We'll write the email; you send it.</p>
+    </div>
+    <div class="enq-grid">
+      <div class="helper rv" id="helper">
+        <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+
+        <div class="step" data-step="1">
+          <h3>What would you like?</h3>
+          <p class="hint">Step 1 of 3</p>
+          <p class="chips-group">A room at the villa</p>
+          <div class="chips" role="group" aria-label="Room type">
+            <button class="chip" aria-pressed="false" data-what="king">King-size room</button>
+            <button class="chip" aria-pressed="false" data-what="double">Double with king-size bed</button>
+            <button class="chip" aria-pressed="false" data-what="single">Single room</button>
+            <button class="chip" aria-pressed="false" data-what="notsure">A room, not sure which</button>
+          </div>
+          <p class="chips-group">Self-catering</p>
+          <div class="chips" role="group" aria-label="Flat">
+            <button class="chip flat" aria-pressed="false" data-what="flat">The whole 9INE flat</button>
+          </div>
+        </div>
+
+        <div class="step" data-step="2" hidden>
+          <h3>Roughly when?</h3>
+          <p class="hint">Step 2 of 3 · just the month, you can give dates in the email</p>
+          <div class="chips" role="group" aria-label="Month" id="months"></div>
+          <div class="nav-row"><button class="back" data-back="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back</button></div>
+        </div>
+
+        <div class="step" data-step="3" hidden>
+          <h3>How many guests?</h3>
+          <p class="hint" id="guest-hint">Step 3 of 3</p>
+          <div class="chips" role="group" aria-label="Guests" id="guests"></div>
+          <div id="park-opt" style="margin-top:18px"><button class="switch" id="park-switch-2" aria-pressed="false"><i aria-hidden="true"></i><span>Ask about one of the 2 parking spaces</span></button></div>
+          <div class="nav-row"><button class="back" data-back="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Back</button><button class="btn btn-ink" id="compose" disabled>Write my email</button></div>
+        </div>
+
+        <div class="step" data-step="4" hidden>
+          <h3>Your email is ready</h3>
+          <p class="to-line">To: <b>sandvilla@holidayoban.co.uk</b> · Subject: <b id="subj"></b></p>
+          <pre class="msg" id="msg"></pre>
+          <div class="cta-row" style="margin-top:0">
+            <a class="btn btn-brass" id="send" href="mailto:sandvilla@holidayoban.co.uk">Open in my email app</a>
+            <button class="copy" id="copy-msg" type="button" style="min-height:46px;padding:0 18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy message</span></button>
+            <a class="btn btn-line" href="tel:+441631564483">Call instead</a>
+          </div>
+          <div class="nav-row"><button class="back" data-back="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>Change something</button><button class="back" id="restart">Start again</button></div>
+        </div>
+        <p class="fine">This opens your own email app. Nothing is sent or stored by this page.</p>
+        <div class="nojs-contact">
+          <h3 style="font:600 26px/1.2 var(--serif);margin:0 0 12px">Call or email the guesthouse</h3>
+          <div class="cta-row"><a class="btn btn-ink" href="tel:+441631564483">Call +44 1631 564483</a><a class="btn btn-line" href="mailto:sandvilla@holidayoban.co.uk">sandvilla@holidayoban.co.uk</a></div>
+        </div>
+      </div>
+
+      <aside class="contact-card rv" aria-label="Contact details">
+        <h3>Sandvilla Guest House</h3>
+        <div class="crow"><div><small>Phone</small><a href="tel:+441631564483">+44 1631 564483</a></div><button class="copy" data-copy="+44 1631 564483"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></div>
+        <div class="crow"><div><small>Email</small><a href="mailto:sandvilla@holidayoban.co.uk">sandvilla@holidayoban.co.uk</a></div><button class="copy" data-copy="sandvilla@holidayoban.co.uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></div>
+        <div class="crow"><div><small>Address</small><span class="v">Breadalbane Street, Oban PA34 5PE</span></div><button class="copy" data-copy="Sandvilla Guest House, Breadalbane Street, Oban PA34 5PE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span>Copy</span></button></div>
+        <div class="crow" style="border-bottom:1px solid var(--line-d)"><div><small>Stay</small><span class="v">6 en-suite rooms · room only · 9INE flat</span></div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fb">Sandvilla</div>
+    <nav aria-label="Footer"><a href="#villa">The villa</a><a href="#stay">Rooms &amp; flat</a><a href="#good">Good to know</a><a href="#here">Getting here</a><a href="#gallery">Gallery</a><a href="#faq">Questions</a><a href="#enquire">Enquire</a></nav>
+    <hr>
+    <p>Sandvilla Guest House · Breadalbane Street, Oban PA34 5PE · <a href="tel:+441631564483">+44 1631 564483</a> · <a href="mailto:sandvilla@holidayoban.co.uk">sandvilla@holidayoban.co.uk</a></p>
+    <p>Photos are stock concept placeholders, not Sandvilla's own rooms or flat. The 3D villa, the flat building and the route sketch are illustrations.</p>
+    <p>Concept redesign by Jeig Torio · not the business's official website</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a href="tel:+441631564483"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a href="mailto:sandvilla@holidayoban.co.uk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>Email</a>
+  <a href="#enquire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Enquire</a>
+</nav>
+
+<script>
+(function(){
+'use strict';
+var EMAIL='sandvilla@holidayoban.co.uk';
+var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var POSTER=/[?&]poster=1/.test(location.search);
+if(POSTER) document.documentElement.classList.add('poster-mode');
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- header, progress, reveal ---------- */
+var burger=$('#burger'),nav=$('#nav');
+burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.setAttribute('aria-label',o?'Close menu':'Open menu')});
+$$('a',nav).forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.focus()}});
+var topbar=$('#topbar');function setHdr(){document.documentElement.style.setProperty('--hdr',topbar.offsetHeight+'px')}setHdr();addEventListener('resize',setHdr);
+var prog=$('.progress'),sceneEl=$('#scene'),heroCopy=$('.hero-copy'),hint=$('#drag-hint');
+var sceneP=0;
+function onScroll(){
+  var h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.setProperty('--p',h>0?(scrollY/h).toFixed(4):0);
+  var top=sceneEl.offsetTop;
+  sceneP=Math.max(0,Math.min(1,(scrollY-top)/Math.max(1,innerHeight-topbar.offsetHeight)));
+  if(!RM){heroCopy.style.opacity=Math.max(0,1-sceneP*1.7).toFixed(3);}
+  heroCopy.style.visibility=sceneP>.62?'hidden':'';
+  sceneEl.classList.toggle('explore',sceneP>.5);
+}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+if('IntersectionObserver' in window && !RM){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  $$('.rv').forEach(function(el){io.observe(el)});
+}else{$$('.rv').forEach(function(el){el.classList.add('in')})}
+
+/* ---------- copy helper ---------- */
+function copyText(t,btn){
+  var done=function(){var s=$('span',btn),old=s.textContent;btn.classList.add('done');s.textContent='Copied ✓';setTimeout(function(){btn.classList.remove('done');s.textContent=old},1800)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fallback()})}else fallback();
+  function fallback(){var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}document.body.removeChild(ta);done()}
+}
+$$('[data-copy]').forEach(function(b){b.addEventListener('click',function(){copyText(b.dataset.copy,b)})});
+
+/* ---------- explorer ---------- */
+var LIT={all:[0,1,2,3,4,5],king:[0,2],double:[1,3,4],single:[5],flat:[]};
+var NAMES={all:'6 of 6 windows lit',king:'2 of 6 windows lit',double:'3 of 6 windows lit',single:'1 of 6 windows lit',flat:'Over at the 9INE flat'};
+var tabs=$$('.tab'),winsI=$$('#wins i'),winsTxt=$('#wins-txt'),illLabel=$('#ill-label'),cur='all';
+var Scene={setType:function(){},ready:false};
+function setType(t,focus){
+  cur=t;
+  tabs.forEach(function(b){var on=b.dataset.type===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()});
+  $$('.room').forEach(function(p){p.hidden=p.id!=='p-'+t});
+  var lit=LIT[t];winsI.forEach(function(w,i){w.classList.toggle('on',lit.indexOf(i)>-1)});
+  winsTxt.textContent=NAMES[t];
+  illLabel.textContent=t==='flat'?'Illustration: a stand-in for the 9INE flat, not its real building; not to scale':'Illustration: which window belongs to which room is not shown';
+  Scene.setType(t);
+}
+tabs.forEach(function(b,i){
+  b.addEventListener('click',function(){setType(b.dataset.type)});
+  b.addEventListener('keydown',function(e){
+    var k=e.key,n=null;
+    if(k==='ArrowRight'||k==='ArrowDown')n=(i+1)%tabs.length;else if(k==='ArrowLeft'||k==='ArrowUp')n=(i-1+tabs.length)%tabs.length;else if(k==='Home')n=0;else if(k==='End')n=tabs.length-1;
+    if(n!==null){e.preventDefault();setType(tabs[n].dataset.type,true)}
+  });
+});
+window.__svSetType=setType;
+setType('all');
+
+/* ---------- good to know ---------- */
+var gks=$$('.gk'),allBtn=$('#gtk-all');
+gks.forEach(function(g){g.addEventListener('click',function(){g.setAttribute('aria-pressed',g.getAttribute('aria-pressed')!=='true');syncAll()})});
+function syncAll(){var all=gks.every(function(g){return g.getAttribute('aria-pressed')==='true'});allBtn.setAttribute('aria-pressed',all);allBtn.textContent=all?'Hide answers':'Show all answers'}
+allBtn.addEventListener('click',function(){var on=allBtn.getAttribute('aria-pressed')!=='true';gks.forEach(function(g){g.setAttribute('aria-pressed',on)});syncAll()});
+
+/* ---------- helper ---------- */
+var S={what:null,month:null,guests:null,parking:false};
+var WHAT={king:'a king-size room',double:'a double room with a king-size bed',single:'the single room',notsure:'a room',flat:'the whole 9INE flat'};
+var WHAT_S={king:'King-size room',double:'Double room (king-size bed)',single:'Single room',notsure:'Room',flat:'9INE flat'};
+var parkSw=[$('#park-switch'),$('#park-switch-2')];
+function setPark(v){S.parking=v;parkSw.forEach(function(s){s.setAttribute('aria-pressed',v)})}
+parkSw.forEach(function(s){s.addEventListener('click',function(){setPark(s.getAttribute('aria-pressed')!=='true')})});
+var steps=$$('.step'),bars=$$('.steps i');
+function go(n,focus){
+  steps.forEach(function(s){s.hidden=+s.dataset.step!==n});
+  bars.forEach(function(b,i){b.classList.toggle('on',i<n)});
+  if(focus!==false){var h=$('.step[data-step="'+n+'"] h3');if(h){h.tabIndex=-1;h.focus({preventScroll:true})}}
+}
+function press(group,btn){$$('.chip',group).forEach(function(c){c.setAttribute('aria-pressed',c===btn)})}
+$$('[data-what]').forEach(function(b){b.addEventListener('click',function(){
+  $$('[data-what]').forEach(function(c){c.setAttribute('aria-pressed',c===b)});
+  S.what=b.dataset.what;S.guests=null;buildGuests();setTimeout(function(){go(2)},RM?0:180);
+})});
+var MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var months=$('#months'),d=new Date();
+for(var i=0;i<12;i++){var m=(d.getMonth()+i)%12,y=d.getFullYear()+Math.floor((d.getMonth()+i)/12);var b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed','false');b.textContent=MN[m]+' '+y;b.dataset.month=MN[m]+' '+y;months.appendChild(b)}
+var ns=document.createElement('button');ns.className='chip';ns.setAttribute('aria-pressed','false');ns.textContent='Not sure yet';ns.dataset.month='Not sure yet';months.appendChild(ns);
+$$('.chip',months).forEach(function(b){b.addEventListener('click',function(){press(months,b);S.month=b.dataset.month;setTimeout(function(){go(3)},RM?0:180)})});
+var guests=$('#guests'),compose=$('#compose');
+function buildGuests(){
+  guests.innerHTML='';
+  var opts=S.what==='flat'?['1 guest','2 guests','3 guests','4 guests']:S.what==='single'?['1 guest']:['1 guest','2 guests','3 or more (more than one room)'];
+  opts.forEach(function(o){var b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed','false');b.textContent=o;b.addEventListener('click',function(){press(guests,b);S.guests=o;compose.disabled=false});guests.appendChild(b)});
+  $('#guest-hint').textContent=S.what==='flat'?'Step 3 of 3 · 9INE sleeps up to 4 people':'Step 3 of 3';
+  $('#park-opt').hidden=S.what==='flat';
+  compose.disabled=true;
+}
+compose.addEventListener('click',function(){
+  if(!S.guests)return;
+  var subj='Enquiry: '+WHAT_S[S.what]+', '+S.month;
+  var lines=['Hello,','','I would like to ask about '+WHAT[S.what]+' at Sandvilla Guest House.','','Rough month: '+S.month,'Guests: '+S.guests];
+  if(S.parking&&S.what!=='flat')lines.push('','I would also like to ask about one of the pre-bookable parking spaces.');
+  lines.push('','Could you let me know if you have availability, and the price?','','Thank you');
+  var body=lines.join('\n');
+  $('#subj').textContent=subj;$('#msg').textContent=body;
+  $('#send').href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  go(4);
+});
+$('#copy-msg').addEventListener('click',function(){copyText('To: '+EMAIL+'\nSubject: '+$('#subj').textContent+'\n\n'+$('#msg').textContent,$('#copy-msg'))});
+$$('[data-back]').forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.back)})});
+$('#restart').addEventListener('click',function(){S.what=S.month=S.guests=null;$$('#helper .chip').forEach(function(c){c.setAttribute('aria-pressed','false')});go(1)});
+$$('[data-ask]').forEach(function(a){a.addEventListener('click',function(){
+  var w=a.dataset.ask,btn=$('[data-what="'+w+'"]');if(btn){btn.click()}
+})});
+
+/* ---------- getting here ---------- */
+var destBtns=$$('.dest button');
+destBtns.forEach(function(b){b.addEventListener('click',function(){
+  var r=b.dataset.r,on=b.getAttribute('aria-pressed')!=='true';
+  destBtns.forEach(function(x){x.setAttribute('aria-pressed',on&&x===b)});
+  $$('.sketch [data-r]').forEach(function(el){var a=on&&el.dataset.r===r;el.classList.remove('on');if(a){void el.getBoundingClientRect();el.classList.add('on')}});
+})});
+var WALK={bus:{t:'1–2',a:1,b:2,l:'Bus station'},train:{t:'1–2',a:1,b:2,l:'Train station'},ferry:{t:'4–5',a:4,b:5,l:'CalMac ferry terminal'}};
+var walkBtns=$$('.walk-chips button');
+walkBtns.forEach(function(b){b.addEventListener('click',function(){
+  walkBtns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+  var w=WALK[b.dataset.w];
+  $('#walk-big').innerHTML=w.t+'<small>minutes\' walk</small>';
+  $('#walk-band').style.left=(w.a*20)+'%';$('#walk-band').style.width='20%';
+  $('#walk-to').style.left=(w.b*20)+'%';$('#walk-lab').textContent=w.l;
+})});
+$('#map-btn').addEventListener('click',function(){
+  var f=$('#mapframe');if(f.querySelector('iframe'))return;
+  var ifr=document.createElement('iframe');ifr.title='Map: Sandvilla Guest House, Oban';ifr.loading='lazy';ifr.referrerPolicy='no-referrer-when-downgrade';
+  ifr.src='https://www.google.com/maps?q=Sandvilla+Guest+House+Oban&output=embed';
+  f.innerHTML='';f.appendChild(ifr);this.textContent='Map loaded';this.disabled=true;
+});
+
+/* ---------- lightbox ---------- */
+var gal=$$('#gal button'),lb=$('#lb'),lbImg=$('#lb-img'),lbCap=$('#lb-cap'),li=0,lastFocus=null;
+function show(i){li=(i+gal.length)%gal.length;var im=$('img',gal[li]);lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent='Concept photo. '+im.alt+'. ('+(li+1)+' of '+gal.length+')'}
+function openLb(i){lastFocus=document.activeElement;show(i);lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';$('#lb-x').focus()}
+function closeLb(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+gal.forEach(function(b,i){b.addEventListener('click',function(){openLb(i)})});
+$('#lb-x').addEventListener('click',closeLb);$('#lb-pv').addEventListener('click',function(){show(li-1)});$('#lb-nx').addEventListener('click',function(){show(li+1)});
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')show(li+1);else if(e.key==='ArrowLeft')show(li-1);
+  else if(e.key==='Tab'){var f=[$('#lb-x'),$('#lb-pv'),$('#lb-nx')],ix=f.indexOf(document.activeElement);e.preventDefault();f[(ix+(e.shiftKey?-1:1)+3)%3].focus()}});
+var tx=null;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)show(li+(dx<0?1:-1));tx=null},{passive:true});
+
+/* ---------- 3D villa ---------- */
+var stage=$('#stage');
+function hasGL(){try{var c=document.createElement('canvas');return !!(window.WebGLRenderingContext&&(c.getContext('webgl2')||c.getContext('webgl')))}catch(e){return false}}
+if(hasGL()){
+  var start=function(){import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js').then(build).catch(function(){})};
+  if(document.readyState==='complete')setTimeout(start,40);else addEventListener('load',function(){setTimeout(start,40)});
+}
+
+function build(THREE){
+  var V3=THREE.Vector3,C=THREE.Color;
+  var W=stage.clientWidth,H=stage.clientHeight;
+  var renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance',preserveDrawingBuffer:POSTER});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.setSize(W,H,false);
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;
+  var cv=renderer.domElement;cv.setAttribute('aria-hidden','true');
+  stage.insertBefore(cv,$('.scrim',stage));
+  var scene=new THREE.Scene();
+  scene.fog=new THREE.Fog(0x3d3452,60,230);
+  var camera=new THREE.PerspectiveCamera(36,W/H,0.3,900);
+
+  var seed=11;function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}
+  var maxAniso=renderer.capabilities.getMaxAnisotropy();
+  function canvasTex(w,h,draw,tile){var c=document.createElement('canvas');c.width=w;c.height=h;var g=c.getContext('2d');draw(g,w,h);var t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=Math.min(8,maxAniso);if(tile)t.repeat.set(1/tile[0],1/tile[1]);return t}
+
+  /* sandstone ashlar: 512px tile = 3 x 3 units, 10 courses */
+  var stoneTex=canvasTex(512,512,function(g,w,h){
+    g.fillStyle='#d8bf9c';g.fillRect(0,0,w,h);
+    var rows=8,rh=h/rows;
+    for(var r=0;r<rows;r++){var x=-rnd()*80;
+      while(x<w){var bw=110+rnd()*110,l=58+rnd()*6,s=24+rnd()*8,hh=30+rnd()*6;
+        g.fillStyle='hsl('+hh+','+s+'%,'+l+'%)';g.fillRect(x+1.5,r*rh+1.5,bw-3,rh-3);
+        if(x+bw>w){g.fillRect(x+1.5-w,r*rh+1.5,bw-3,rh-3)}
+        g.fillStyle='rgba(255,240,220,.08)';g.fillRect(x+1.5,r*rh+1.5,bw-3,3);
+        g.fillStyle='rgba(60,30,10,.10)';g.fillRect(x+1.5,r*rh+rh-5,bw-3,3.5);
+        x+=bw}}
+    for(var i=0;i<9000;i++){g.fillStyle=rnd()<.5?'rgba(80,45,20,.10)':'rgba(255,235,205,.09)';g.fillRect(rnd()*w,rnd()*h,1.5,1.5)}
+  },[3,3]);
+  var slateTex=canvasTex(256,256,function(g,w,h){
+    g.fillStyle='#1f242c';g.fillRect(0,0,w,h);
+    var cols=14,cw=w/cols;
+    for(var c=0;c<cols;c++){var y=(c%2)*10-rnd()*6;
+      while(y<h){var sh=18+rnd()*10,l=20+rnd()*9;g.fillStyle='hsl(218,10%,'+l+'%)';g.fillRect(c*cw+1,y+1,cw-2,sh-2);if(y+sh>h)g.fillRect(c*cw+1,y+1-h,cw-2,sh-2);y+=sh}}
+  },[2.4,2.4]);
+  var renderTex=canvasTex(256,256,function(g,w,h){g.fillStyle='#cfc6b6';g.fillRect(0,0,w,h);for(var i=0;i<7000;i++){g.fillStyle=rnd()<.5?'rgba(70,60,50,.10)':'rgba(255,255,250,.12)';g.fillRect(rnd()*w,rnd()*h,1.3,1.3)}},[2,2]);
+  var paveTex=canvasTex(256,256,function(g,w,h){g.fillStyle='#4a4650';g.fillRect(0,0,w,h);for(var y=0;y<h;y+=64)for(var x=0;x<w;x+=64){var l=26+rnd()*8;g.fillStyle='hsl(260,6%,'+l+'%)';g.fillRect(x+2,y+2,60,60)}},[1.6,1.6]);
+  var interiorTex=canvasTex(128,192,function(g,w,h){
+    var gr=g.createLinearGradient(0,0,0,h);gr.addColorStop(0,'#c77a2a');gr.addColorStop(.45,'#ffd58a');gr.addColorStop(1,'#e59a3c');g.fillStyle=gr;g.fillRect(0,0,w,h);
+    var rg=g.createRadialGradient(w*.5,h*.62,4,w*.5,h*.62,w*.7);rg.addColorStop(0,'rgba(255,245,210,.9)');rg.addColorStop(1,'rgba(255,245,210,0)');g.fillStyle=rg;g.fillRect(0,0,w,h);
+    for(var s=0;s<2;s++){var x0=s?w*.8:0;for(var i=0;i<6;i++){g.fillStyle=i%2?'rgba(110,45,30,.75)':'rgba(150,70,40,.7)';g.fillRect(x0+i*(w*.2/6),0,w*.2/6+.5,h)}}
+    g.fillStyle='rgba(120,60,30,.55)';g.fillRect(0,0,w,h*.07);
+  });
+  var glowTex=canvasTex(128,128,function(g,w,h){var rg=g.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);rg.addColorStop(0,'rgba(255,255,255,1)');rg.addColorStop(.35,'rgba(255,255,255,.35)');rg.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=rg;g.fillRect(0,0,w,h)});
+  var plateTex=canvasTex(256,96,function(g,w,h){g.fillStyle='#b8862c';g.fillRect(0,0,w,h);g.strokeStyle='#ffe2a0';g.lineWidth=5;g.strokeRect(8,8,w-16,h-16);g.fillStyle='#2a1d05';g.font='600 58px Georgia, serif';g.textAlign='center';g.textBaseline='middle';g.fillText('9INE',w/2,h/2+3)});
+  var namePlateTex=canvasTex(320,96,function(g,w,h){g.fillStyle='#b8862c';g.fillRect(0,0,w,h);g.strokeStyle='#ffe2a0';g.lineWidth=4;g.strokeRect(7,7,w-14,h-14);g.fillStyle='#2a1d05';g.font='600 46px Georgia, serif';g.textAlign='center';g.textBaseline='middle';g.fillText('Sandvilla',w/2,h/2+2)});
+
+  function worldUV(geo,w,h,d){var uv=geo.attributes.uv,dims=[[d,h],[d,h],[w,d],[w,d],[w,h],[w,h]];for(var f=0;f<6;f++)for(var k=0;k<4;k++){var i=f*4+k;uv.setXY(i,uv.getX(i)*dims[f][0],uv.getY(i)*dims[f][1])}uv.needsUpdate=true;return geo}
+
+  /* materials */
+  var M={
+    stone:new THREE.MeshStandardMaterial({map:stoneTex,color:0xffffff,roughness:.92}),
+    stoneN1:new THREE.MeshStandardMaterial({map:stoneTex,color:0x7a7280,roughness:.92}),
+    stoneN2:new THREE.MeshStandardMaterial({map:stoneTex,color:0x857565,roughness:.92}),
+    dress:new THREE.MeshStandardMaterial({color:0xe6d2b4,roughness:.85}),
+    plinth:new THREE.MeshStandardMaterial({map:stoneTex,color:0x9a7d66,roughness:.95}),
+    slate:new THREE.MeshStandardMaterial({map:slateTex,color:0xffffff,roughness:.62,metalness:.05,envMapIntensity:.9}),
+    lead:new THREE.MeshStandardMaterial({color:0x2a2f37,roughness:.5}),
+    frame:new THREE.MeshStandardMaterial({color:0xf1e9dc,roughness:.6}),
+    glassOff:new THREE.MeshStandardMaterial({color:0x10141d,roughness:.12,metalness:.1,envMapIntensity:1.6}),
+    door:new THREE.MeshStandardMaterial({color:0x40305a,roughness:.45,envMapIntensity:.8}),
+    doorN1:new THREE.MeshStandardMaterial({color:0x24413a,roughness:.45}),
+    doorN2:new THREE.MeshStandardMaterial({color:0x5a2a2a,roughness:.45}),
+    brass:new THREE.MeshStandardMaterial({color:0xd9a845,roughness:.3,metalness:.9,envMapIntensity:1.4}),
+    iron:new THREE.MeshStandardMaterial({color:0x14161b,roughness:.5,metalness:.4}),
+    pot:new THREE.MeshStandardMaterial({color:0x9c4f33,roughness:.85}),
+    garden:new THREE.MeshStandardMaterial({color:0x26302a,roughness:1}),
+    pave:new THREE.MeshStandardMaterial({map:paveTex,color:0xffffff,roughness:.8}),
+    road:new THREE.MeshStandardMaterial({color:0x1d1c24,roughness:.42,metalness:.0,envMapIntensity:.7}),
+    kerb:new THREE.MeshStandardMaterial({color:0x7c7680,roughness:.8}),
+    render:new THREE.MeshStandardMaterial({map:renderTex,color:0xb9b2aa,roughness:.95}),
+    lampHead:new THREE.MeshStandardMaterial({color:0x111111,emissive:0xffcf80,emissiveIntensity:3}),
+    keypad:new THREE.MeshStandardMaterial({color:0x111111,emissive:0xf3c255,emissiveIntensity:2}),
+    plate:new THREE.MeshStandardMaterial({map:plateTex,emissive:0xffffff,emissiveMap:plateTex,emissiveIntensity:.35,roughness:.4,metalness:.3})
+  };
+  function litMat(){return new THREE.MeshStandardMaterial({color:0x10141d,roughness:.15,metalness:.1,envMapIntensity:1.4,emissive:0xffffff,emissiveMap:interiorTex,emissiveIntensity:0})}
+
+  function box(w,h,d,mat,x,y,z,parent,uvw){var g=new THREE.BoxGeometry(w,h,d);if(uvw)worldUV(g,w,h,d);var m=new THREE.Mesh(g,mat);m.position.set(x,y,z);(parent||scene).add(m);return m}
+  function cyl(r,h,mat,x,y,z,parent,seg){var m=new THREE.Mesh(new THREE.CylinderGeometry(r,r,h,seg||10),mat);m.position.set(x,y,z);(parent||scene).add(m);return m}
+
+  /* window: glass + sash frame + sill + lintel, in local coords of parent, facing +z of a pivot */
+  function makeWindow(parent,x,y,z,ry,w,h,glass,opt){
+    opt=opt||{};
+    var p=new THREE.Group();p.position.set(x,y,z);p.rotation.y=ry;parent.add(p);
+    var gl=new THREE.Mesh(new THREE.PlaneGeometry(w,h),glass);gl.position.z=0.005;p.add(gl);
+    var t=0.07,dz=0.05;
+    box(w+t,t,dz*2,M.frame,0,h/2,dz,p);box(w+t,t,dz*2,M.frame,0,-h/2,dz,p);
+    box(t,h,dz*2,M.frame,-w/2,0,dz,p);box(t,h,dz*2,M.frame,w/2,0,dz,p);
+    box(w,0.08,dz*2.4,M.frame,0,0,dz*1.2,p);box(0.035,h,dz*1.6,M.frame,0,0,dz,p);
+    if(!opt.noSurround){box(w+0.4,0.14,0.32,M.dress,0,-h/2-0.1,0.12,p);box(w+0.34,0.26,0.14,M.dress,0,h/2+0.16,0.05,p)}
+    return p;
+  }
+
+  var units=[];
+  function makeUnit(){var u={mat:litMat(),cur:0,target:0,delay:0,lights:[],glows:[]};units.push(u);return u}
+  function addGlow(u,parent,x,y,z,w,h){
+    var sm=new THREE.SpriteMaterial({map:glowTex,color:0xffb04a,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,opacity:0});
+    var s=new THREE.Sprite(sm);s.position.set(x,y,z);s.scale.set(w*2.4,h*1.7,1);parent.add(s);u.glows.push(s);
+    var l=new THREE.PointLight(0xffb24d,0,8.5,1.6);l.position.set(x,y-0.2,z+0.5);parent.add(l);u.lights.push(l);
+  }
+
+  /* ---- one terrace house ---- */
+  var HW=8;
+  function house(cx,main,variant){
+    var g=new THREE.Group();g.position.x=cx;scene.add(g);
+    var sm=main?M.stone:(variant?M.stoneN1:M.stoneN2);
+    box(HW,7.6,10,sm,0,3.8,-5,g,true);
+    box(HW+.02,0.9,0.14,M.plinth,0,0.45,0.05,g,true);
+    box(HW+.04,0.16,0.2,M.dress,0,4.1,0.08,g);
+    box(HW+.1,0.34,0.5,M.dress,0,7.48,0.2,g);
+    box(HW+.12,0.12,0.18,M.lead,0,7.68,0.42,g);
+    /* canted bay */
+    var sh=new THREE.Shape();sh.moveTo(-1.9,0);sh.lineTo(-1.15,-0.85);sh.lineTo(1.15,-0.85);sh.lineTo(1.9,0);sh.lineTo(-1.9,0);
+    var bg=new THREE.ExtrudeGeometry(sh,{depth:7.25,bevelEnabled:false});bg.rotateX(-Math.PI/2);
+    var uvA=bg.attributes.uv;for(var i=0;i<uvA.count;i++)uvA.setXY(i,uvA.getX(i),uvA.getY(i));
+    var bay=new THREE.Mesh(bg,sm);bay.position.set(-2,0,0);g.add(bay);
+    var bayTop=new THREE.Mesh(new THREE.ExtrudeGeometry((function(){var s=new THREE.Shape();s.moveTo(-2.05,0.05);s.lineTo(-1.22,-0.98);s.lineTo(1.22,-0.98);s.lineTo(2.05,0.05);s.lineTo(-2.05,0.05);return s})(),{depth:0.3,bevelEnabled:false}).rotateX(-Math.PI/2),M.dress);bayTop.position.set(-2,7.1,0);g.add(bayTop);
+    var bayMid=bayTop.clone();bayMid.scale.y=0.55;bayMid.position.y=4.0;g.add(bayMid);
+    var sideAng=Math.atan2(-0.85,0.75),sx=-1.525,sz=0.425;
+    var floors=[2.5,5.7],uG=null;
+    for(var f=0;f<2;f++){
+      var u=main?makeUnit():null,gm=u?u.mat:M.glassOff,y=floors[f];
+      makeWindow(g,-2,y,0.851,0,1.5,2.2,gm,{noSurround:true});
+      makeWindow(g,-2+sx,y,sz+0.006,sideAng,0.62,2.2,gm,{noSurround:true});
+      makeWindow(g,-2-sx,y,sz+0.006,-sideAng,0.62,2.2,gm,{noSurround:true});
+      if(u)addGlow(u,g,-2,y,1.3,2.6,2.2);
+      if(f===0)uG=u;
+    }
+    /* right side: ground window, first window, door */
+    var u1=main?makeUnit():null;makeWindow(g,0.95,2.5,0.001,0,1.2,2.2,u1?u1.mat:M.glassOff);if(u1)addGlow(u1,g,0.95,2.5,0.45,1.2,2.2);
+    var u3=main?makeUnit():null;makeWindow(g,1.95,5.7,0.001,0,1.6,2.2,u3?u3.mat:M.glassOff);if(u3)addGlow(u3,g,1.95,5.7,0.45,1.6,2.2);
+    /* reorder: units order = G-bay(0), G-win(1), F-bay(2), F-win(3) */
+    if(main){var a=units.splice(0,4);units.push(a[0],a[2],a[1],a[3])}
+    /* door + surround */
+    var dx=2.9;
+    box(1.1,2.4,0.08,main?M.door:(variant?M.doorN1:M.doorN2),dx,0.9+1.2,0.02,g);
+    box(0.24,2.95,0.22,M.dress,dx-0.7,0.9+1.47,0.08,g);box(0.24,2.95,0.22,M.dress,dx+0.7,0.9+1.47,0.08,g);
+    box(1.75,0.24,0.42,M.dress,dx,0.9+3.0,0.16,g);
+    var fan=new THREE.Mesh(new THREE.PlaneGeometry(1.1,0.42),M.glassOff);fan.position.set(dx,0.9+2.66,0.02);g.add(fan);
+    box(1.14,0.06,0.06,M.frame,dx,0.9+2.43,0.05,g);
+    for(var pn=0;pn<2;pn++)for(var pr=0;pr<2;pr++)box(0.36,0.78,0.03,main?M.door:M.doorN1,dx-0.22+pn*0.44,0.9+0.55+pr*1.05,0.075,g);
+    var knob=new THREE.Mesh(new THREE.SphereGeometry(0.05,12,8),M.brass);knob.position.set(dx+0.36,0.9+1.15,0.12);g.add(knob);
+    box(0.36,0.06,0.03,M.brass,dx,0.9+1.45,0.075,g);
+    /* steps */
+    box(1.7,0.9,0.6,M.dress,dx,0.45,0.3,g);
+    for(var s=0;s<4;s++){var hgt=(s+1)*0.18;box(1.6,hgt,0.34,M.dress,dx,hgt/2,0.6+(3-s)*0.34+0.17,g)}
+    /* step railings */
+    for(var side=-1;side<=1;side+=2){
+      var rx=dx+side*0.82;
+      for(var k=0;k<6;k++){var zz=0.15+k*0.34,yy=0.9-Math.max(0,(zz-0.6))/0.34*0.18;cyl(0.018,0.95,M.iron,rx,yy+0.47,zz,g,6)}
+      var rail=box(0.05,0.05,2.0,M.iron,rx,1.62,1.0,g);rail.rotation.x=-0.33;rail.position.y=1.55;
+    }
+    /* garden, wall, railings, gate pillars, path */
+    box(HW,0.02,3.3,M.garden,0,0.01,1.65,g);
+    box(1.4,0.04,1.4,M.pave,dx,0.02,2.6,g,true);
+    var segs=[[-4,dx-0.85],[dx+0.85,4]];
+    segs.forEach(function(sg){var w=sg[1]-sg[0];if(w<=0.05)return;box(w,0.55,0.32,sm,(sg[0]+sg[1])/2,0.275,3.3,g,true);box(w,0.08,0.4,M.dress,(sg[0]+sg[1])/2,0.59,3.3,g)});
+    [dx-0.85,dx+0.85].forEach(function(px){box(0.42,1.05,0.42,M.dress,px,0.52,3.3,g);box(0.52,0.1,0.52,M.dress,px,1.1,3.3,g)});
+    /* dormers */
+    [-2,2].forEach(function(dx2,di){
+      box(1.7,1.7,2.4,sm,dx2,8.75,-1.65,g,true);
+      var rf=new THREE.Mesh(new THREE.ExtrudeGeometry((function(){var s=new THREE.Shape();s.moveTo(-1.05,0);s.lineTo(0,0.75);s.lineTo(1.05,0);s.lineTo(-1.05,0);return s})(),{depth:2.6,bevelEnabled:false}),M.slate);
+      rf.position.set(dx2,9.6,-2.95);g.add(rf);
+      var du=main?makeUnit():null;makeWindow(g,dx2,8.72,-0.449,0,0.95,1.15,du?du.mat:M.glassOff,{noSurround:true});
+      box(1.15,0.1,0.2,M.dress,dx2,8.08,-0.38,g);
+      if(du)addGlow(du,g,dx2,8.72,-0.05,1.0,1.15);
+    });
+    /* wall lamp by the door (main only) */
+    if(main){var np=new THREE.Mesh(new THREE.PlaneGeometry(0.62,0.19),new THREE.MeshStandardMaterial({map:namePlateTex,emissive:0xffffff,emissiveMap:namePlateTex,emissiveIntensity:.45,roughness:.4,metalness:.3}));np.position.set(dx+0.85,0.72,3.515);g.add(np);var lp=box(0.16,0.28,0.16,M.lampHead,dx+0.98,0.9+2.5,0.22,g);var ll=new THREE.PointLight(0xffc77a,3.5,5,1.8);ll.position.set(dx+0.98,0.9+2.4,0.6);g.add(ll)}
+    return g;
+  }
+  house(-16,false,1);house(-8,false,0);house(0,true);house(8,false,1);house(16,false,0);
+  box(0.5,7.6,10,M.stoneN2,-20.2,3.8,-5,null);box(0.5,7.6,10,M.stoneN1,20.2,3.8,-5,null);
+  /* terrace roof */
+  var rs=new THREE.Shape();rs.moveTo(0.5,7.55);rs.lineTo(-4.75,10.7);rs.lineTo(-10.2,7.55);rs.lineTo(0.5,7.55);
+  var rg=new THREE.ExtrudeGeometry(rs,{depth:40.6,bevelEnabled:false});rg.rotateY(-Math.PI/2);rg.translate(20.3,0,0);
+  var roof=new THREE.Mesh(rg,M.slate);scene.add(roof);
+  box(40.6,0.14,0.26,M.lead,0,10.72,-4.75,null);
+  /* chimney stacks on party walls */
+  [-20,-12,-4,4,12,20].forEach(function(x){
+    box(1.1,2.6,1.7,x===-4||x===4?M.stone:M.stoneN2,x,11.2,-4.75,null,true);
+    box(1.3,0.22,1.9,M.dress,x,12.55,-4.75,null);
+    for(var p=0;p<4;p++){var px=x-0.42+p*0.28;cyl(0.1,0.55,M.pot,px,12.92,-4.75,null,10);cyl(0.13,0.08,M.pot,px,13.2,-4.75,null,10)}
+  });
+  /* railings along front walls (instanced) */
+  var railGeo=new THREE.CylinderGeometry(0.018,0.018,0.75,6);var railPos=[];
+  for(var hx=-16;hx<=16;hx+=8){[[hx-4,hx+2.05],[hx+3.75,hx+4]].forEach(function(sg){for(var x=sg[0]+0.1;x<sg[1]-0.1;x+=0.17)railPos.push(x)})}
+  var rim=new THREE.InstancedMesh(railGeo,M.iron,railPos.length);var dm=new THREE.Object3D();
+  railPos.forEach(function(x,i){dm.position.set(x,0.63+0.375,3.3);dm.updateMatrix();rim.setMatrixAt(i,dm.matrix)});scene.add(rim);
+  for(var hx2=-16;hx2<=16;hx2+=8){box(6.0,0.04,0.04,M.iron,hx2-0.97,1.36,3.3,null);}
+  /* pavement, kerb, road */
+  box(140,0.14,2.6,M.pave,8,0.07,4.75,null,true);
+  box(140,0.18,0.22,M.kerb,8,0.09,6.08,null);
+  var road=new THREE.Mesh(new THREE.PlaneGeometry(400,200),M.road);road.rotation.x=-Math.PI/2;road.position.set(0,-0.01,40);scene.add(road);
+  /* street lamp */
+  function streetLamp(x,z){cyl(0.07,4.6,M.iron,x,2.3,z,null,10);box(0.34,0.5,0.34,M.lampHead,x,4.8,z,null);box(0.46,0.08,0.46,M.iron,x,5.08,z,null);
+    var l=new THREE.PointLight(0xffc77a,9,14,1.5);l.position.set(x,4.55,z);scene.add(l);
+    var s=new THREE.Sprite(new THREE.SpriteMaterial({map:glowTex,color:0xffc070,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false,opacity:.75}));s.position.set(x,4.8,z);s.scale.set(2.4,2.4,1);scene.add(s)}
+  streetLamp(9.6,5.6);streetLamp(-10.5,5.6);
+
+  /* ---- the 9INE stand-in building ---- */
+  var FP=new V3(38,0,14),FR=-0.82;
+  var flat=new THREE.Group();flat.position.copy(FP);flat.rotation.y=FR;scene.add(flat);
+  box(7.4,6.6,7,M.render,0,3.3,-3.5,flat,true);
+  box(7.5,0.7,0.12,M.plinth,0,0.35,0.04,flat,true);
+  box(7.6,0.28,0.4,M.dress,0,6.5,0.12,flat);
+  var fr=new THREE.Shape();fr.moveTo(0.4,6.6);fr.lineTo(-3.5,9.0);fr.lineTo(-7.4,6.6);fr.lineTo(0.4,6.6);
+  var frg=new THREE.ExtrudeGeometry(fr,{depth:7.6,bevelEnabled:false});frg.rotateY(-Math.PI/2);frg.translate(3.8,0,0);flat.add(new THREE.Mesh(frg,M.slate));
+  box(0.9,1.8,1.1,M.render,2.4,9.2,-3.5,flat,true);for(var q=0;q<2;q++)cyl(0.1,0.5,M.pot,2.2+q*0.4,10.35,-3.5,flat);
+  var fu=makeUnit();fu.flat=true;
+  [[-2.3,4.6],[0,4.6],[2.3,4.6],[-2.3,1.9],[2.3,1.9]].forEach(function(p){makeWindow(flat,p[0],p[1],0.001,0,1.15,1.6,fu.mat);addGlow(fu,flat,p[0],p[1],0.4,1.15,1.6)});
+  fu.lights.forEach(function(l,i){if(i%2)l.visible=false});
+  box(1.05,2.25,0.08,M.door,0,1.13+0.0,0.02,flat);box(1.45,0.2,0.3,M.dress,0,2.4,0.12,flat);
+  box(0.14,2.3,0.16,M.dress,-0.62,1.15,0.06,flat);box(0.14,2.3,0.16,M.dress,0.62,1.15,0.06,flat);
+  var plate=new THREE.Mesh(new THREE.PlaneGeometry(0.62,0.24),M.plate);plate.position.set(-1.05,1.7,0.02);flat.add(plate);
+  var lockB=box(0.22,0.3,0.1,M.iron,1.0,1.35,0.06,flat);var kp=box(0.14,0.16,0.02,M.keypad,1.0,1.37,0.115,flat);
+  var lockLight=new THREE.PointLight(0xf3c255,1.2,2.2,2);lockLight.position.set(1.0,1.4,0.4);flat.add(lockLight);
+  box(9,0.14,2.6,M.pave,0,0.07,1.3,flat,true);
+  (function(){var v=new V3(5.4,0,2.4).applyAxisAngle(new V3(0,1,0),FR).add(FP);streetLamp(v.x,v.z)})();
+  var lockWorld=new V3();
+
+  /* ---- sky, hills, stars ---- */
+  var skyMat=new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,fog:false,
+    uniforms:{top:{value:new C('#121628')},mid:{value:new C('#47395f')},hor:{value:new C('#d8925a')}},
+    vertexShader:'varying vec3 vP;void main(){vP=normalize(position);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader:'uniform vec3 top,mid,hor;varying vec3 vP;void main(){float h=vP.y;vec3 c=mix(hor,mid,smoothstep(-0.02,0.22,h));c=mix(c,top,smoothstep(0.22,0.75,h));float g=exp(-max(h,0.)*7.)*0.45*(0.55+0.45*max(0.,-vP.z));c+=vec3(1.,.55,.25)*g*0.35;gl_FragColor=vec4(c,1.);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n}'});
+  var sky=new THREE.Mesh(new THREE.SphereGeometry(420,40,20),skyMat);scene.add(sky);
+  var pm=new THREE.PMREMGenerator(renderer);var envScene=new THREE.Scene();envScene.add(new THREE.Mesh(new THREE.SphereGeometry(20,32,16),skyMat));
+  scene.environment=pm.fromScene(envScene,0.02).texture;scene.environmentIntensity=0.55;
+  function hills(z,col,base,amp,off,fogOn){
+    var s=new THREE.Shape();s.moveTo(-420,-20);
+    for(var x=-420;x<=420;x+=6){var n=Math.sin(x*0.011+off)*0.5+Math.sin(x*0.027+off*2.3)*0.3+Math.sin(x*0.061+off*.7)*0.2;s.lineTo(x,base+amp*(0.5+0.5*n))}
+    s.lineTo(420,-20);s.lineTo(-420,-20);
+    var m=new THREE.Mesh(new THREE.ShapeGeometry(s),new THREE.MeshBasicMaterial({color:col,fog:fogOn}));m.position.z=z;scene.add(m);return m}
+  hills(-330,0x6a5684,6,58,1.2,false);hills(-250,0x45385e,0,46,3.9,false);hills(-170,0x2e2742,-4,30,6.1,false);
+  var sp=[];for(var i=0;i<520;i++){var th=rnd()*Math.PI*2,ph=0.18+rnd()*1.2,r=400;var y=Math.sin(ph)*r;if(y<70)continue;sp.push(Math.cos(th)*Math.cos(ph)*r,y,Math.sin(th)*Math.cos(ph)*r)}
+  var sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.Float32BufferAttribute(sp,3));
+  var cloudTex=canvasTex(256,128,function(g,w,h){for(var i=0;i<14;i++){var x=30+rnd()*(w-60),y=h*.45+rnd()*h*.2,r=20+rnd()*34;var rg=g.createRadialGradient(x,y,0,x,y,r);rg.addColorStop(0,'rgba(255,255,255,.55)');rg.addColorStop(1,'rgba(255,255,255,0)');g.fillStyle=rg;g.fillRect(0,0,w,h)}});
+  var clouds=[];[[-120,70,-260,170],[60,95,-280,210],[190,60,-240,150],[-10,120,-300,240]].forEach(function(c,i){var m=new THREE.Sprite(new THREE.SpriteMaterial({map:cloudTex,color:i%2?0x8a6f9a:0xb07a78,transparent:true,opacity:.42,depthWrite:false,fog:false}));m.position.set(c[0],c[1],c[2]);m.scale.set(c[3],c[3]*.42,1);scene.add(m);clouds.push(m)});
+  var stars=new THREE.Points(sg,new THREE.PointsMaterial({color:0xfff1d0,size:1.6,sizeAttenuation:false,transparent:true,opacity:.75,fog:false}));scene.add(stars);
+
+  /* ---- lights ---- */
+  scene.add(new THREE.HemisphereLight(0x6f62a0,0x2a2026,0.55));
+  var moon=new THREE.DirectionalLight(0x9fb0e0,0.4);moon.position.set(-30,40,30);scene.add(moon);
+  var key=new THREE.SpotLight(0xffd6a0,70,60,0.22,0.9,1.3);key.position.set(1,12,26);key.target.position.set(0,4.6,0);scene.add(key);scene.add(key.target);
+
+  /* ---- camera poses ---- */
+  var VF=36,tan=Math.tan(VF/2*Math.PI/180);
+  function poseFor(mode){
+    var a=W/H,portrait=a<0.9,o={};
+    var tg=new V3(),dir=new V3(),halfW,dist;
+    if(mode==='flat'){
+      halfW=portrait?7.6:10.5;dist=Math.max(portrait?17:19,halfW/(tan*a));
+      tg.set(portrait?0:(a>1.25?4.6:2),portrait?2.6:4.6,0);
+      if(portrait)tg.y=4.4-0.4*tan*dist;
+      dir.set(0.1,0.12,1).normalize();
+      tg.applyAxisAngle(new V3(0,1,0),FR).add(FP);dir.applyAxisAngle(new V3(0,1,0),FR);
+    }else if(mode==='villa'){
+      halfW=portrait?7.4:13.5;dist=Math.max(portrait?19:22,halfW/(tan*a));
+      tg.set(portrait?0.3:(a>1.25?6.2:3),6.4,0);
+      if(portrait)tg.y=5.6-0.4*tan*dist;
+      dir.set(0.14,0.06,1).normalize();
+    }else{
+      halfW=portrait?7.4:16;dist=Math.max(portrait?20:24,halfW/(tan*a));
+      tg.set(portrait?0.8:(a>1.25?-5.5:-2),6.6,0);
+      if(portrait)tg.y=5.6+0.42*tan*dist;
+      dir.set(0.42,0.04,1).normalize();
+    }
+    o.t=tg;o.p=tg.clone().add(dir.multiplyScalar(dist));return o;
+  }
+  var mode='all',flatK=0,flatTarget=0,flatFrom=0,flatT0=0;
+  Scene.setType=function(t){
+    mode=t;
+    var lit=LIT[t]||[];
+    var order=0;
+    units.forEach(function(u,i){if(u.flat){u.target=t==='flat'?1:0.55;return}var on=lit.indexOf(i)>-1;if(on&&u.target<0.5){u.delay=RM?0:order*0.14;order++}else u.delay=0;u.target=t==='flat'?0.35:(on?1:0.04)});
+    var nt=t==='flat'?1:0;if(nt!==flatTarget){flatFrom=flatK;flatTarget=nt;flatT0=performance.now()}
+    if(RM){flatK=flatTarget}
+    wake();
+  };
+  /* initial: all lit, staggered on load */
+  units.forEach(function(u,i){u.target=u.flat?0.55:1;u.delay=POSTER?0:0.5+i*0.16;if(POSTER)u.cur=u.target});
+  window.__svScene={units:units,get mode(){return mode},get flatK(){return flatK}};
+
+  /* drag */
+  var yaw=0,pitch=0,yawT=0,pitchT=0,dragging=false,lx=0,ly=0,lastInput=0,touchMode=false;
+  stage.addEventListener('pointerdown',function(e){if(e.target.closest('a,button,.panel'))return;dragging=true;touchMode=e.pointerType==='touch';lx=e.clientX;ly=e.clientY;stage.classList.add('dragging');hint.style.opacity='0'});
+  addEventListener('pointermove',function(e){if(!dragging)return;var dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;yawT=Math.max(-0.34,Math.min(0.34,yawT-dx*0.0032));if(!touchMode)pitchT=Math.max(-0.1,Math.min(0.12,pitchT+dy*0.0018));lastInput=performance.now();wake()});
+  addEventListener('pointerup',function(){dragging=false;stage.classList.remove('dragging')});addEventListener('pointercancel',function(){dragging=false;stage.classList.remove('dragging')});
+  if(!RM)hint.classList.add('show');
+
+  /* loop */
+  var running=false,raf=0,last=performance.now(),T=0,first=true,inView=true;
+  var basePos=new V3(),baseTg=new V3(),fP=new V3(),fT=new V3(),tmp=new V3(),Y=new V3(0,1,0);
+  var tagLock=$('#tag-lock');
+  function ease(k){return k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2}
+  function update(dt,now){
+    T+=dt;
+    /* flat tween */
+    if(!RM){var k=Math.min(1,(now-flatT0)/1600);flatK=flatFrom+(flatTarget-flatFrom)*ease(k)}
+    var pH=poseFor('all'),pV=poseFor('villa'),pF=poseFor('flat');
+    var s=POSTER?0:(RM?(sceneP>.5?1:0):ease(Math.min(1,sceneP*1.15)));
+    basePos.copy(pH.p).lerp(pV.p,s);baseTg.copy(pH.t).lerp(pV.t,s);
+    fP.copy(basePos).lerp(pF.p,flatK);fT.copy(baseTg).lerp(pF.t,flatK);
+    var arc=Math.sin(Math.PI*flatK);fP.y+=arc*3.2;fP.z+=arc*5;
+    /* drag return */
+    if(!dragging&&now-lastInput>2500){yawT*=Math.pow(0.2,dt);pitchT*=Math.pow(0.2,dt)}
+    yaw+=(yawT-yaw)*Math.min(1,dt*6);pitch+=(pitchT-pitch)*Math.min(1,dt*6);
+    tmp.copy(fP).sub(fT);tmp.applyAxisAngle(Y,yaw);
+    var right=new V3().crossVectors(Y,tmp).normalize();tmp.applyAxisAngle(right,pitch);
+    camera.position.copy(fT).add(tmp);
+    if(!RM&&!POSTER){camera.position.x+=Math.sin(T*0.45)*0.35;camera.position.y+=Math.sin(T*0.31)*0.12}
+    camera.lookAt(fT);
+    /* windows */
+    for(var i=0;i<units.length;i++){var u=units[i];
+      if(u.delay>0){u.delay-=dt;continue}
+      u.cur+=(u.target-u.cur)*(RM?1:Math.min(1,dt*4.5));
+      var c=u.cur;u.mat.emissiveIntensity=c*3.0;
+      for(var j=0;j<u.lights.length;j++)u.lights[j].intensity=c*2.6;
+      for(var j2=0;j2<u.glows.length;j2++)u.glows[j2].material.opacity=c*0.38;
+    }
+    if(!RM){for(var ci=0;ci<clouds.length;ci++){clouds[ci].position.x+=dt*(1.2+ci*0.3);if(clouds[ci].position.x>260)clouds[ci].position.x=-260}}
+    M.keypad.emissiveIntensity=1.4+Math.sin(T*3)*0.8*(RM?0:1);
+    /* lockbox tag */
+    if(flatK>0.92){lockB.getWorldPosition(lockWorld);lockWorld.project(camera);var x=(lockWorld.x*.5+.5)*W,y=(-lockWorld.y*.5+.5)*H;tagLock.style.transform='translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px) translate(-50%,-150%)';tagLock.classList.add('on')}else tagLock.classList.remove('on');
+  }
+  function frame(now){
+    raf=0;if(!running)return;
+    var dt=Math.min(0.05,(now-last)/1000);last=now;
+    update(dt,now);renderer.render(scene,camera);
+    if(first){first=false;cv.classList.add('on');Scene.ready=true;window.__svReady=true}
+    raf=requestAnimationFrame(frame);
+  }
+  function wake(){running=inView&&!document.hidden;if(running&&!raf){last=performance.now();raf=requestAnimationFrame(frame)}}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){inView=es[0].isIntersecting;wake()},{threshold:0}).observe(sceneEl)}
+  document.addEventListener('visibilitychange',wake);
+  function resize(){W=stage.clientWidth;H=stage.clientHeight;if(!W||!H)return;renderer.setSize(W,H,false);camera.aspect=W/H;camera.updateProjectionMatrix();wake()}
+  if('ResizeObserver' in window)new ResizeObserver(resize).observe(stage);else addEventListener('resize',resize);
+  camera.aspect=W/H;camera.updateProjectionMatrix();
+  Scene.setType(cur);
+  if(cur==='all'){units.forEach(function(u,i){u.delay=POSTER?0:0.4+i*0.16})}
+  wake();
+}
+})();
+</script>
+</body>
+</html>
